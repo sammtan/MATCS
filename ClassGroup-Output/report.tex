@@ -189,27 +189,14 @@ Urutan fase adalah North/South Green, North/South Yellow, All-Red to East/West, 
 Komponen tambahan adalah demand generator, observation adapter, state, controller strategy, safety validator, simulated actuator, metrics collector, CLI, dan future authority-approved observation adapter. Deployment saat ini hanya satu laptop dengan satu proses Python dan test runner lokal. Diagram editable lengkap tersedia pada `docs/11-uml-models.md` di repository.
 
 \section{BAB 4. ANALISIS, PERENCANAAN, IMPLEMENTASI, DAN EVALUASI SEMENTARA}
-\subsection{4.1 Draft Memorandum of Understanding (MoU)}
-Bagian ini adalah template akademik untuk kesepakatan internal kelompok; bukan izin akses infrastruktur publik.
+\subsection{Memorandum of Understanding (MoU)}
+Naskah MoU akademik telah disusun mengikuti format template dan tersedia sebagai dokumen Markdown terpisah pada \texttt{ClassGroup-Output/MoU-MATCS.md}. Dokumen tersebut mencakup identitas para pihak, tujuan dan ruang lingkup kolaborasi, jangka waktu, hak dan kewajiban, keselamatan dan data, kekayaan intelektual, keadaan kahar, perubahan, serta blok penutup dan tanda tangan.
 
-\subsubsection{Para Pihak}
-Pihak A adalah tim mahasiswa MATCS. Pihak B adalah dosen/pembimbing atau pemilik konteks akademik yang ditunjuk. Nama, jabatan, dan tanggal efektif harus diisi setelah disepakati.
+Pihak pertama adalah Tim Proyek MATCS yang diwakili Samuel Tanaka Sibarani, dengan Alfonsus Tanara G dan Ade Zaskia Azzahra sebagai anggota tim. Pihak kedua adalah dosen pengampu/pembimbing, Prof. Dr. Ir. Riri Fitri Sari, M.M., M.Sc. (RFS). Nomor dokumen, kapasitas penandatangan, alamat/kontak, tempat, tanggal efektif, serta keterangan institusional yang belum tersedia ditandai sebagai isian untuk dikonfirmasi.
 
-\subsubsection{Tujuan}
-MoU mengatur kolaborasi pengembangan software simulation-first, pembagian tugas, review evidence, penggunaan repository, dan batas keselamatan. Tujuan MoU bukan memberikan kewenangan untuk mengendalikan sinyal publik.
+\textbf{Status MoU:} Naskah telah selesai disusun dan siap disampaikan kepada para pihak untuk ditinjau dan dilengkapi sebelum persetujuan/penandatanganan. Status complete pada laporan ini merujuk pada penyelesaian penyusunan dokumen, bukan persetujuan, tanda tangan, pengesahan, atau izin akses infrastruktur. MoU tidak memberi kewenangan observasi lapangan maupun aktuasi sinyal publik; setiap kegiatan di luar simulasi memerlukan persetujuan terpisah dan prosedur institusional/otoritas yang berlaku.
 
-\subsubsection{Ruang Lingkup dan Kewajiban}
-Pihak A mengembangkan simulator, controller, tests, eksperimen, UML, dan dokumentasi. Pihak B memberikan review akademik, acceptance criteria, dan umpan balik. Semua pihak menjaga reproducibility, mencatat keputusan, dan tidak mempublikasikan data sensitif tanpa persetujuan.
-
-\subsubsection{Keselamatan, Data, dan Kekayaan Intelektual}
-Aktuator hanya simulasi. Data lapangan, bila suatu saat disetujui, hanya digunakan sesuai izin tertulis, minimisasi data, dan prosedur yang disepakati. Kode dan report dikelola pada repository kelompok; kontribusi anggota dicatat melalui commit, review, dan dokumen.
-
-\subsubsection{Durasi, Perubahan, dan Terminasi}
-MoU berlaku selama periode mata kuliah dan dapat diubah melalui persetujuan tertulis. Pihak dapat menghentikan aktivitas yang tidak aman, tidak etis, atau tidak sesuai scope. Detail legal harus ditinjau oleh pihak universitas sebelum digunakan sebagai dokumen formal.
-
-\textbf{Status MoU:} Sampai laporan ini diperbarui, MoU belum dibuat, belum dibahas untuk persetujuan final, belum disetujui oleh para pihak, dan belum disahkan. Isi di atas hanya merupakan draft konseptual untuk dibahas kemudian.
-
-\subsection{4.2 COCOMO: Estimasi Awal}
+\subsection{COCOMO: Estimasi Awal}
 Estimasi berikut menggunakan Basic COCOMO organic sebagai estimasi akademik awal. Ukuran asumsi adalah 2.5 KLOC equivalent untuk vertical slice Python, effort multiplier organic \(a=2.4\), \(b=1.05\), schedule \(c=2.5\), dan \(d=0.38\).
 
 \[
@@ -221,7 +208,7 @@ T = 2.5(E)^{0.38} \approx 4.9\text{ months}
 
 Angka ini bukan klaim durasi aktual tiga mahasiswa. Kode masih kecil, banyak aktivitas bersifat pembelajaran/dokumentasi, dan COCOMO tidak menangkap seluruh reuse standard library maupun kontribusi non-code. Dengan tiga anggota, angka effort kasar tersebut setara rata-rata sekitar 2.1 person-month per anggota sebelum memperhitungkan kalender kuliah.
 
-\subsection{4.3 Function Point Analysis}
+\subsection{Function Point Analysis}
 FPA berikut menggunakan pendekatan simplified IFPUG dengan bobot low complexity: External Input (EI)=3, External Output (EO)=4, External Inquiry (EQ)=3, Internal Logical File (ILF)=7, External Interface File (EIF)=5.
 
 \begin{longtable}{p{0.48\textwidth} r r r}
@@ -241,7 +228,7 @@ Future approved observation input (EIF) & 1 & 5 & 5\\
 
 Dengan asumsi general system characteristics total 25 dari skala 0--5, value adjustment factor adalah \(0.65 + 0.01(25)=0.90\). Maka adjusted FP diperkirakan \(73\times0.90=65.7\), dibulatkan menjadi 66 FP. Nilai ini harus direvisi ketika dashboard, database, atau adapter lapangan benar-benar diimplementasikan.
 
-\subsection{4.4 Analisis Kebutuhan dan Arsitektur}
+\subsection{Analisis Kebutuhan dan Arsitektur}
 \subsection{Kebutuhan Fungsional}
 \begin{enumerate}
   \item Sistem dapat menjalankan simulasi dengan seed dan durasi tertentu.
@@ -258,7 +245,7 @@ Reproducibility, local execution, no external dependency, safety-boundary separa
 \subsection{Arsitektur}
 Aliran utama adalah demand/observation menuju SimulationState, controller proposal, deterministic validator, simulated actuator, lalu metrics. Future field observation adapter hanya dapat ditambahkan melalui authority-approved gate dan tidak mengubah simulator menjadi pengendali publik secara otomatis.
 
-\subsection{4.5 Implementasi Sistem}
+\subsection{Implementasi Sistem}
 \subsection{Lingkungan Pengembangan}
 Implementasi menggunakan Python 3 dan standard library. Seluruh kode, test, scripts, dokumentasi, dan report source tersedia pada GitHub repository kelompok: \url{https://github.com/sammtan/MATCS}. Repository menggunakan struktur `src/mtacs` untuk package, `tests` untuk unittest, `scripts/run\_experiments.py` untuk batch experiment, dan `docs` untuk design records.
 
@@ -271,14 +258,14 @@ FixedTimeController mengikuti urutan fase terkonfigurasi. QueueAwareController m
 \subsection{Metrics and Batch Runner}
 MetricsCollector menghitung queue maximum, mean queue, accumulated delay, throughput, fairness index, per-approach waiting, per-approach maximum queue, dan validation interventions. Batch runner menjalankan kombinasi seed, durasi, profile, dan controller lalu menghasilkan `raw\_runs.csv` dan `summary.json`.
 
-\subsection{4.6 Pengujian dan Validasi}
+\subsection{Pengujian dan Validasi}
 \subsection{Automated Tests}
 Sebanyak 13 test berhasil dijalankan. Cakupannya meliputi transition, stale proposal, skipped phase, reproducibility, profile/duration matrix, matched controller inputs, stress scale, zero demand, fairness bounds, starvation protection, metrics keys, dan artifact schema.
 
 \subsection{Acceptance Result}
 Hasil final adalah `Ran 13 tests ... OK`. Seluruh test berjalan lokal tanpa dependency tambahan. Zero validation intervention pada batch runs menunjukkan proposal yang dihasilkan controller memenuhi kontrak transisi pada simulator; hasil ini bukan sertifikasi keselamatan dunia nyata.
 
-\subsection{4.7 Hasil Eksperimen dan Pembahasan}
+\subsection{Hasil Eksperimen dan Pembahasan}
 \subsection{Eksperimen}
 Batch evidence terdiri dari 4 demand profile, 2 durasi (120 dan 600 detik), 5 seed, dan 2 controller, sehingga menghasilkan 80 runs. Perbandingan menggunakan profile, seed, duration, timing, service rate, dan topology yang sama.
 
@@ -300,14 +287,40 @@ Queue-aware paling menjanjikan ketika demand tidak seimbang, khususnya east/west
 \subsection{Kesiapan Fase Berikutnya}
 MATCS siap memasuki controlled heuristic refinement, statistical evaluation, dan review UML/report. MATCS belum siap untuk klaim AI, calibrated digital twin, field observation, shadow mode, atau real-world actuation. Tahap berikutnya harus menambah seed, confidence interval, statistical test, fairness per approach, dan demand calibration sebelum policy learning dipertimbangkan.
 
-\section{BAB 5. KESIMPULAN DAN SARAN (TEMPORARY)}
-\subsection{Kesimpulan Sementara (Temporary)}
-MATCS telah berkembang dari proposal simulation-first menjadi vertical slice yang dapat dijalankan dan diuji. Sistem memiliki fixed-time baseline, queue-aware heuristic, deterministic safety validator, simulated actuator, richer metrics, batch experiment artifacts, dan dokumentasi UML. Evidence saat ini mendukung manfaat terbatas pada demand directional-heavy, tetapi belum mendukung klaim universal.
+\section{BAB 5. PROGRES IMPLEMENTASI, KESIMPULAN, DAN SARAN}
+\subsection{Progres Coding pada Fase Ini}
+Pada fase ini, MATCS telah mencapai \textit{simulation-only vertical slice} yang dapat dijalankan dan diuji secara lokal. Implementasi Python standard library mencakup model domain dan konfigurasi skenario, kedatangan kendaraan dengan seed, fixed-time baseline, queue-aware heuristic, validasi proposal fase deterministik, aktuator simulasi, pengumpulan metrik, CLI, serta pembangkit eksperimen batch. Ruang lingkup ini tetap terbatas pada satu persimpangan simulasi; belum ada integrasi perangkat keras, jaringan publik, sensor lapangan, database, atau sistem otoritas.
 
-\subsection{Saran Pengembangan Sementara (Temporary)}
-Prioritas berikutnya adalah menambah seed dan statistical analysis, memperbaiki pressure scoring dan starvation policy, melakukan peer review kode, menambahkan dashboard setelah kontrak stabil, dan memperbarui COCOMO/FPA berdasarkan scope aktual. Authority package sengaja belum dikembangkan pada fase ini.
+Validasi yang terdokumentasi terdiri dari 13 automated tests dan 80 run eksperimen terkontrol. Hasil tersebut memberi bukti reproduktibilitas dan perilaku awal controller, bukan sertifikasi keselamatan atau bukti kesiapan deployment. Artefak eksperimen tersedia di \texttt{results/experiments/raw\_runs.csv} dan \texttt{results/experiments/summary.json}.
 
-\subsection{Keterbatasan Saat Ini (Temporary)}
+\subsection{Important Codes}
+Seluruh kode berada pada repository kelompok \url{https://github.com/sammtan/MATCS}.
+
+\begin{longtable}{p{0.29\textwidth} p{0.62\textwidth}}
+\toprule
+\textbf{File} & \textbf{Peran dan poin presentasi}\\
+\midrule
+\texttt{src/mtacs/models.py} & Model domain: pendekat, fase sinyal, timing, konfigurasi/seed skenario, state simulasi, proposal, hasil validasi, dan struktur metrik.\\
+\texttt{src/mtacs/controller.py} & Dua kebijakan pembanding: fixed-time sebagai baseline dan queue-aware heuristic yang mempertimbangkan antrean, waktu tunggu, minimum/maximum green, dan starvation threshold.\\
+\texttt{src/mtacs/safety.py} & Gerbang keselamatan deterministik: menolak proposal dengan waktu simulasi kedaluwarsa atau transisi fase yang melompati urutan aman.\\
+\texttt{src/mtacs/simulator.py} & Alur satu tick: generate arrivals, minta proposal controller, validasi, apply pada simulated actuator, layani kendaraan, lalu perbarui waktu dan metrik.\\
+\texttt{src/mtacs/metrics.py} & Penghitungan antrean rata-rata/maksimum, delay, throughput, fairness, waiting per pendekat, serta intervensi validator.\\
+\texttt{src/mtacs/\_\_main\_\_.py} & CLI demo untuk memilih seed, durasi, skenario, dan controller; mencetak fase akhir dan hasil metrik.\\
+\texttt{scripts/run\_experiments.py} & Menjalankan matriks eksperimen matched-seed dan menulis raw CSV serta summary JSON.\\
+\texttt{tests/}\newline\texttt{test\_vertical\_slice.py} dan test di \texttt{tests/} & Contoh validasi controller, penolakan transisi tidak aman, reproduktibilitas, starvation/fairness, dan format artefak.\\
+\texttt{results/experiments/} & Bukti keluaran 80 run yang dirujuk pada slide hasil eksperimen; pasangan controller dibandingkan pada demand profile, durasi, dan seed yang sama.\\
+\bottomrule
+\end{longtable}
+
+Urutan narasi demo yang disarankan: mulai dari kontrak domain pada \texttt{models.py}; tunjukkan perbedaan kebijakan pada \texttt{controller.py}; ikuti batas keselamatan pada \texttt{safety.py}; jelaskan aliran satu tick di \texttt{simulator.py}; lalu tampilkan bukti melalui \texttt{run\_experiments.py}, \texttt{raw\_runs.csv}, dan \texttt{summary.json}. Demo dijalankan melalui \texttt{python -m mtacs --seed 42 --ticks 120 --scenario balanced --controller queue\_aware} dengan \texttt{PYTHONPATH=src}.
+
+\subsection{Kesimpulan}
+MATCS telah berkembang dari proposal simulation-first menjadi vertical slice yang dapat dijalankan dan diuji. Sistem memiliki fixed-time baseline, queue-aware heuristic, deterministic safety validator, simulated actuator, metrik, batch experiment artifacts, dan dokumentasi UML. Evidence saat ini mendukung manfaat terbatas pada demand directional-heavy, tetapi belum mendukung klaim universal.
+
+\subsection{Saran Pengembangan}
+Prioritas berikutnya adalah menambah seed dan statistical analysis, memperbaiki pressure scoring dan starvation policy, melakukan peer review kode, menambahkan dashboard setelah kontrak stabil, serta memperbarui COCOMO/FPA berdasarkan scope aktual. Authority package sengaja belum dikembangkan pada fase ini.
+
+\subsection{Keterbatasan Saat Ini}
 Demand masih synthetic, simulator hanya satu persimpangan, travel time dan emissions proxy belum tersedia, intervensi validator belum terpicu pada valid batch, dan hasil tidak dapat diekstrapolasi langsung ke sistem lalu lintas nyata.
 
 \section*{Daftar Pustaka}
