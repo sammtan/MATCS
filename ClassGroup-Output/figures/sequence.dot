@@ -1,0 +1,21 @@
+digraph SequenceDiagram {
+  graph [rankdir=LR, bgcolor="white", pad="0.2", nodesep="0.55", ranksep="0.8", label="MATCS Simulation-Tick Sequence", labelloc=t, fontsize=20];
+  node [shape=box, style="rounded", fontname="Helvetica", fontsize=10];
+  edge [fontname="Helvetica", fontsize=9];
+  cli [label="CLI"];
+  sim [label="TrafficSimulator"];
+  ctrl [label="Controller\nFixed / Queue-aware"];
+  validator [label="SafetyValidator"];
+  actuator [label="SimulatedActuator"];
+  metrics [label="MetricsCollector"];
+  cli -> sim [label="run(config)"];
+  sim -> ctrl [label="propose(state)"];
+  ctrl -> sim [label="ControllerProposal"];
+  sim -> validator [label="validate(state, proposal)"];
+  validator -> sim [label="ValidationResult"];
+  sim -> actuator [label="apply(validated phase)"];
+  actuator -> sim [label="updated state"];
+  sim -> metrics [label="observe(state)"];
+  metrics -> sim [label="recorded metrics"];
+  sim -> cli [label="final state + RunMetrics"];
+}

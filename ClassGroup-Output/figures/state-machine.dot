@@ -1,0 +1,21 @@
+digraph StateMachine {
+  graph [rankdir=LR, bgcolor="white", pad="0.2", nodesep="0.45", ranksep="0.7", label="MATCS Signal State Machine", labelloc=t, fontsize=20];
+  node [shape=box, style="rounded", fontname="Helvetica", fontsize=10];
+  edge [fontname="Helvetica", fontsize=9];
+  start [shape=circle, label="", width=0.2, style=filled, fillcolor=black];
+  ns_green [label="North/South\nGreen"];
+  ns_yellow [label="North/South\nYellow"];
+  red_ew [label="All-Red\nto East/West"];
+  ew_green [label="East/West\nGreen"];
+  ew_yellow [label="East/West\nYellow"];
+  red_ns [label="All-Red\nto North/South"];
+  start -> ns_green;
+  ns_green -> ns_yellow [label="minimum green"];
+  ns_yellow -> red_ew [label="yellow elapsed"];
+  red_ew -> ew_green [label="all-red elapsed"];
+  ew_green -> ew_yellow [label="minimum green / max green"];
+  ew_yellow -> red_ns [label="yellow elapsed"];
+  red_ns -> ns_green [label="all-red elapsed"];
+  ns_green -> ns_green [label="keep"];
+  ew_green -> ew_green [label="keep"];
+}

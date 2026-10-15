@@ -1,0 +1,25 @@
+digraph UseCase {
+  graph [rankdir=LR, bgcolor="white", pad="0.2", nodesep="0.45", ranksep="0.8", label="MATCS Use-Case Diagram", labelloc=t, fontsize=20];
+  node [fontname="Helvetica", fontsize=11];
+  edge [fontname="Helvetica", fontsize=9];
+  system [shape=box, style="rounded", label="MATCS\nSimulation System", width=3.2, height=5.2];
+  student [shape=box, label="Student Developer"];
+  lecturer [shape=box, label="Lecturer / Reviewer"];
+  authority [shape=box, label="Authority / Site\nStakeholder"];
+  run [shape=ellipse, label="Run Simulation"];
+  compare [shape=ellipse, label="Compare Controllers"];
+  metrics [shape=ellipse, label="Inspect Metrics\nand Replay Data"];
+  safety [shape=ellipse, label="Review Safety\nBoundary"];
+  observe [shape=ellipse, label="Approve Observation\nScope (Future Gate)"];
+  student -> run;
+  student -> compare;
+  student -> metrics;
+  lecturer -> metrics;
+  lecturer -> safety;
+  authority -> observe;
+  run -> system [dir=none, style=dashed];
+  compare -> system [dir=none, style=dashed];
+  metrics -> system [dir=none, style=dashed];
+  safety -> system [dir=none, style=dashed];
+  observe -> system [dir=none, style=dashed];
+}

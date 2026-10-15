@@ -1,0 +1,25 @@
+digraph ClassDiagram {
+  graph [rankdir=LR, bgcolor="white", pad="0.2", nodesep="0.5", ranksep="0.8", label="MATCS Class Diagram", labelloc=t, fontsize=20];
+  node [shape=record, fontname="Helvetica", fontsize=10];
+  edge [fontname="Helvetica", fontsize=9];
+  ScenarioConfig [label="{ScenarioConfig|seed: int\lduration_seconds: int\larrival_probability: float\lservice_rate: int\ldemand_profile: DemandProfile\ltiming: TimingPlan\l}"];
+  TimingPlan [label="{TimingPlan|green_seconds: int\lyellow_seconds: int\lall_red_seconds: int\lmax_green_seconds: int\l}"];
+  SimulationState [label="{SimulationState|simulation_time: int\lqueues: dict\lwaiting_seconds_by_approach\lmaximum_queue_by_approach\lvalidation_interventions: int\l}"];
+  Fixed [label="{FixedTimeController|propose(state): ControllerProposal\l}"];
+  Queue [label="{QueueAwareController|queue_pressure_weight: float\lstarvation_threshold_seconds: int\lpropose(state): ControllerProposal\l}"];
+  Proposal [label="{ControllerProposal|simulation_time: int\lrequested_phase: SignalPhase\lcontroller_name: str\l}"];
+  Validator [label="{SafetyValidator|validate(state, proposal): ValidationResult\l}"];
+  Actuator [label="{SimulatedActuator|apply(state, phase)\l}"];
+  Simulator [label="{TrafficSimulator|run()\lstep()\l}"];
+  Metrics [label="{RunMetrics|delay\lqueue\lfairness_index\lthroughput\l}"];
+  ScenarioConfig -> TimingPlan [label="contains"];
+  Simulator -> ScenarioConfig;
+  Simulator -> SimulationState;
+  Simulator -> Fixed [label="selects"];
+  Simulator -> Queue [label="selects"];
+  Fixed -> Proposal [label="creates"];
+  Queue -> Proposal [label="creates"];
+  Simulator -> Validator;
+  Simulator -> Actuator;
+  Simulator -> Metrics [label="produces"];
+}

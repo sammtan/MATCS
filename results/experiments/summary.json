@@ -1,0 +1,2557 @@
+{
+  "experiment": {
+    "controllers": [
+      "fixed_time",
+      "queue_aware"
+    ],
+    "durations": [
+      120,
+      600
+    ],
+    "profiles": [
+      "balanced",
+      "north_south_heavy",
+      "east_west_heavy",
+      "stress"
+    ],
+    "seeds": [
+      7,
+      17,
+      23,
+      42,
+      99
+    ]
+  },
+  "runs": [
+    {
+      "accumulated_delay": 1428,
+      "controller": "fixed_time",
+      "duration_seconds": 120,
+      "fairness_index": 0.9612,
+      "final_queue_length": 12,
+      "maximum_queue_by_approach": {
+        "east": 8,
+        "north": 12,
+        "south": 9,
+        "west": 7
+      },
+      "maximum_queue_length": 20,
+      "mean_queue_length": 11.9,
+      "profile": "balanced",
+      "seed": 7,
+      "throughput_per_minute": 60.5,
+      "total_arrivals": 133,
+      "total_departures": 121,
+      "total_stops": 133,
+      "validation_interventions": 0,
+      "waiting_seconds_by_approach": {
+        "east": 98,
+        "north": 89,
+        "south": 55,
+        "west": 92
+      }
+    },
+    {
+      "accumulated_delay": 1494,
+      "controller": "queue_aware",
+      "duration_seconds": 120,
+      "fairness_index": 0.961,
+      "final_queue_length": 14,
+      "maximum_queue_by_approach": {
+        "east": 8,
+        "north": 11,
+        "south": 10,
+        "west": 6
+      },
+      "maximum_queue_length": 23,
+      "mean_queue_length": 12.45,
+      "profile": "balanced",
+      "seed": 7,
+      "throughput_per_minute": 59.5,
+      "total_arrivals": 133,
+      "total_departures": 119,
+      "total_stops": 133,
+      "validation_interventions": 0,
+      "waiting_seconds_by_approach": {
+        "east": 101,
+        "north": 84,
+        "south": 56,
+        "west": 91
+      }
+    },
+    {
+      "accumulated_delay": 1267,
+      "controller": "fixed_time",
+      "duration_seconds": 120,
+      "fairness_index": 0.992,
+      "final_queue_length": 9,
+      "maximum_queue_by_approach": {
+        "east": 8,
+        "north": 7,
+        "south": 9,
+        "west": 8
+      },
+      "maximum_queue_length": 19,
+      "mean_queue_length": 10.56,
+      "profile": "balanced",
+      "seed": 17,
+      "throughput_per_minute": 53.5,
+      "total_arrivals": 116,
+      "total_departures": 107,
+      "total_stops": 116,
+      "validation_interventions": 0,
+      "waiting_seconds_by_approach": {
+        "east": 91,
+        "north": 72,
+        "south": 81,
+        "west": 89
+      }
+    },
+    {
+      "accumulated_delay": 1267,
+      "controller": "queue_aware",
+      "duration_seconds": 120,
+      "fairness_index": 0.992,
+      "final_queue_length": 9,
+      "maximum_queue_by_approach": {
+        "east": 8,
+        "north": 7,
+        "south": 9,
+        "west": 8
+      },
+      "maximum_queue_length": 19,
+      "mean_queue_length": 10.56,
+      "profile": "balanced",
+      "seed": 17,
+      "throughput_per_minute": 53.5,
+      "total_arrivals": 116,
+      "total_departures": 107,
+      "total_stops": 116,
+      "validation_interventions": 0,
+      "waiting_seconds_by_approach": {
+        "east": 91,
+        "north": 72,
+        "south": 81,
+        "west": 89
+      }
+    },
+    {
+      "accumulated_delay": 1124,
+      "controller": "fixed_time",
+      "duration_seconds": 120,
+      "fairness_index": 0.981,
+      "final_queue_length": 8,
+      "maximum_queue_by_approach": {
+        "east": 5,
+        "north": 7,
+        "south": 10,
+        "west": 10
+      },
+      "maximum_queue_length": 17,
+      "mean_queue_length": 9.37,
+      "profile": "balanced",
+      "seed": 23,
+      "throughput_per_minute": 49.5,
+      "total_arrivals": 107,
+      "total_departures": 99,
+      "total_stops": 107,
+      "validation_interventions": 0,
+      "waiting_seconds_by_approach": {
+        "east": 72,
+        "north": 69,
+        "south": 73,
+        "west": 96
+      }
+    },
+    {
+      "accumulated_delay": 1204,
+      "controller": "queue_aware",
+      "duration_seconds": 120,
+      "fairness_index": 0.9928,
+      "final_queue_length": 11,
+      "maximum_queue_by_approach": {
+        "east": 5,
+        "north": 7,
+        "south": 10,
+        "west": 9
+      },
+      "maximum_queue_length": 18,
+      "mean_queue_length": 10.03,
+      "profile": "balanced",
+      "seed": 23,
+      "throughput_per_minute": 48.0,
+      "total_arrivals": 107,
+      "total_departures": 96,
+      "total_stops": 107,
+      "validation_interventions": 0,
+      "waiting_seconds_by_approach": {
+        "east": 78,
+        "north": 75,
+        "south": 79,
+        "west": 93
+      }
+    },
+    {
+      "accumulated_delay": 1250,
+      "controller": "fixed_time",
+      "duration_seconds": 120,
+      "fairness_index": 0.9723,
+      "final_queue_length": 9,
+      "maximum_queue_by_approach": {
+        "east": 8,
+        "north": 8,
+        "south": 8,
+        "west": 9
+      },
+      "maximum_queue_length": 19,
+      "mean_queue_length": 10.42,
+      "profile": "balanced",
+      "seed": 42,
+      "throughput_per_minute": 57.5,
+      "total_arrivals": 124,
+      "total_departures": 115,
+      "total_stops": 124,
+      "validation_interventions": 0,
+      "waiting_seconds_by_approach": {
+        "east": 84,
+        "north": 66,
+        "south": 68,
+        "west": 99
+      }
+    },
+    {
+      "accumulated_delay": 1305,
+      "controller": "queue_aware",
+      "duration_seconds": 120,
+      "fairness_index": 0.9907,
+      "final_queue_length": 16,
+      "maximum_queue_by_approach": {
+        "east": 8,
+        "north": 10,
+        "south": 7,
+        "west": 8
+      },
+      "maximum_queue_length": 19,
+      "mean_queue_length": 10.88,
+      "profile": "balanced",
+      "seed": 42,
+      "throughput_per_minute": 54.0,
+      "total_arrivals": 124,
+      "total_departures": 108,
+      "total_stops": 124,
+      "validation_interventions": 0,
+      "waiting_seconds_by_approach": {
+        "east": 83,
+        "north": 68,
+        "south": 78,
+        "west": 89
+      }
+    },
+    {
+      "accumulated_delay": 1361,
+      "controller": "fixed_time",
+      "duration_seconds": 120,
+      "fairness_index": 0.9847,
+      "final_queue_length": 12,
+      "maximum_queue_by_approach": {
+        "east": 10,
+        "north": 7,
+        "south": 8,
+        "west": 8
+      },
+      "maximum_queue_length": 21,
+      "mean_queue_length": 11.34,
+      "profile": "balanced",
+      "seed": 99,
+      "throughput_per_minute": 57.0,
+      "total_arrivals": 126,
+      "total_departures": 114,
+      "total_stops": 126,
+      "validation_interventions": 0,
+      "waiting_seconds_by_approach": {
+        "east": 100,
+        "north": 77,
+        "south": 74,
+        "west": 92
+      }
+    },
+    {
+      "accumulated_delay": 1278,
+      "controller": "queue_aware",
+      "duration_seconds": 120,
+      "fairness_index": 0.9859,
+      "final_queue_length": 14,
+      "maximum_queue_by_approach": {
+        "east": 9,
+        "north": 7,
+        "south": 8,
+        "west": 8
+      },
+      "maximum_queue_length": 19,
+      "mean_queue_length": 10.65,
+      "profile": "balanced",
+      "seed": 99,
+      "throughput_per_minute": 56.0,
+      "total_arrivals": 126,
+      "total_departures": 112,
+      "total_stops": 126,
+      "validation_interventions": 0,
+      "waiting_seconds_by_approach": {
+        "east": 94,
+        "north": 71,
+        "south": 73,
+        "west": 88
+      }
+    },
+    {
+      "accumulated_delay": 7152,
+      "controller": "fixed_time",
+      "duration_seconds": 600,
+      "fairness_index": 0.9979,
+      "final_queue_length": 15,
+      "maximum_queue_by_approach": {
+        "east": 9,
+        "north": 12,
+        "south": 9,
+        "west": 11
+      },
+      "maximum_queue_length": 22,
+      "mean_queue_length": 11.92,
+      "profile": "balanced",
+      "seed": 7,
+      "throughput_per_minute": 62.1,
+      "total_arrivals": 636,
+      "total_departures": 621,
+      "total_stops": 636,
+      "validation_interventions": 0,
+      "waiting_seconds_by_approach": {
+        "east": 437,
+        "north": 444,
+        "south": 394,
+        "west": 419
+      }
+    },
+    {
+      "accumulated_delay": 7034,
+      "controller": "queue_aware",
+      "duration_seconds": 600,
+      "fairness_index": 0.9992,
+      "final_queue_length": 16,
+      "maximum_queue_by_approach": {
+        "east": 10,
+        "north": 11,
+        "south": 10,
+        "west": 13
+      },
+      "maximum_queue_length": 23,
+      "mean_queue_length": 11.72,
+      "profile": "balanced",
+      "seed": 7,
+      "throughput_per_minute": 62.0,
+      "total_arrivals": 636,
+      "total_departures": 620,
+      "total_stops": 636,
+      "validation_interventions": 0,
+      "waiting_seconds_by_approach": {
+        "east": 434,
+        "north": 429,
+        "south": 403,
+        "west": 428
+      }
+    },
+    {
+      "accumulated_delay": 6059,
+      "controller": "fixed_time",
+      "duration_seconds": 600,
+      "fairness_index": 0.9958,
+      "final_queue_length": 5,
+      "maximum_queue_by_approach": {
+        "east": 8,
+        "north": 14,
+        "south": 9,
+        "west": 11
+      },
+      "maximum_queue_length": 22,
+      "mean_queue_length": 10.1,
+      "profile": "balanced",
+      "seed": 17,
+      "throughput_per_minute": 56.8,
+      "total_arrivals": 573,
+      "total_departures": 568,
+      "total_stops": 573,
+      "validation_interventions": 0,
+      "waiting_seconds_by_approach": {
+        "east": 405,
+        "north": 415,
+        "south": 355,
+        "west": 421
+      }
+    },
+    {
+      "accumulated_delay": 6059,
+      "controller": "queue_aware",
+      "duration_seconds": 600,
+      "fairness_index": 0.9958,
+      "final_queue_length": 5,
+      "maximum_queue_by_approach": {
+        "east": 8,
+        "north": 14,
+        "south": 9,
+        "west": 11
+      },
+      "maximum_queue_length": 22,
+      "mean_queue_length": 10.1,
+      "profile": "balanced",
+      "seed": 17,
+      "throughput_per_minute": 56.8,
+      "total_arrivals": 573,
+      "total_departures": 568,
+      "total_stops": 573,
+      "validation_interventions": 0,
+      "waiting_seconds_by_approach": {
+        "east": 405,
+        "north": 415,
+        "south": 355,
+        "west": 421
+      }
+    },
+    {
+      "accumulated_delay": 7144,
+      "controller": "fixed_time",
+      "duration_seconds": 600,
+      "fairness_index": 0.9992,
+      "final_queue_length": 12,
+      "maximum_queue_by_approach": {
+        "east": 10,
+        "north": 9,
+        "south": 10,
+        "west": 13
+      },
+      "maximum_queue_length": 27,
+      "mean_queue_length": 11.91,
+      "profile": "balanced",
+      "seed": 23,
+      "throughput_per_minute": 59.9,
+      "total_arrivals": 611,
+      "total_departures": 599,
+      "total_stops": 611,
+      "validation_interventions": 0,
+      "waiting_seconds_by_approach": {
+        "east": 409,
+        "north": 426,
+        "south": 429,
+        "west": 442
+      }
+    },
+    {
+      "accumulated_delay": 6983,
+      "controller": "queue_aware",
+      "duration_seconds": 600,
+      "fairness_index": 0.9993,
+      "final_queue_length": 14,
+      "maximum_queue_by_approach": {
+        "east": 10,
+        "north": 9,
+        "south": 10,
+        "west": 15
+      },
+      "maximum_queue_length": 25,
+      "mean_queue_length": 11.64,
+      "profile": "balanced",
+      "seed": 23,
+      "throughput_per_minute": 59.7,
+      "total_arrivals": 611,
+      "total_departures": 597,
+      "total_stops": 611,
+      "validation_interventions": 0,
+      "waiting_seconds_by_approach": {
+        "east": 428,
+        "north": 436,
+        "south": 412,
+        "west": 442
+      }
+    },
+    {
+      "accumulated_delay": 5865,
+      "controller": "fixed_time",
+      "duration_seconds": 600,
+      "fairness_index": 0.9978,
+      "final_queue_length": 7,
+      "maximum_queue_by_approach": {
+        "east": 8,
+        "north": 11,
+        "south": 12,
+        "west": 9
+      },
+      "maximum_queue_length": 21,
+      "mean_queue_length": 9.78,
+      "profile": "balanced",
+      "seed": 42,
+      "throughput_per_minute": 56.3,
+      "total_arrivals": 570,
+      "total_departures": 563,
+      "total_stops": 570,
+      "validation_interventions": 0,
+      "waiting_seconds_by_approach": {
+        "east": 379,
+        "north": 422,
+        "south": 419,
+        "west": 388
+      }
+    },
+    {
+      "accumulated_delay": 6297,
+      "controller": "queue_aware",
+      "duration_seconds": 600,
+      "fairness_index": 0.9981,
+      "final_queue_length": 8,
+      "maximum_queue_by_approach": {
+        "east": 11,
+        "north": 10,
+        "south": 12,
+        "west": 9
+      },
+      "maximum_queue_length": 20,
+      "mean_queue_length": 10.49,
+      "profile": "balanced",
+      "seed": 42,
+      "throughput_per_minute": 56.2,
+      "total_arrivals": 570,
+      "total_departures": 562,
+      "total_stops": 570,
+      "validation_interventions": 0,
+      "waiting_seconds_by_approach": {
+        "east": 391,
+        "north": 395,
+        "south": 434,
+        "west": 394
+      }
+    },
+    {
+      "accumulated_delay": 7113,
+      "controller": "fixed_time",
+      "duration_seconds": 600,
+      "fairness_index": 0.9999,
+      "final_queue_length": 15,
+      "maximum_queue_by_approach": {
+        "east": 13,
+        "north": 8,
+        "south": 12,
+        "west": 11
+      },
+      "maximum_queue_length": 26,
+      "mean_queue_length": 11.86,
+      "profile": "balanced",
+      "seed": 99,
+      "throughput_per_minute": 60.9,
+      "total_arrivals": 624,
+      "total_departures": 609,
+      "total_stops": 624,
+      "validation_interventions": 0,
+      "waiting_seconds_by_approach": {
+        "east": 428,
+        "north": 439,
+        "south": 442,
+        "west": 436
+      }
+    },
+    {
+      "accumulated_delay": 6938,
+      "controller": "queue_aware",
+      "duration_seconds": 600,
+      "fairness_index": 0.9999,
+      "final_queue_length": 16,
+      "maximum_queue_by_approach": {
+        "east": 13,
+        "north": 8,
+        "south": 12,
+        "west": 10
+      },
+      "maximum_queue_length": 25,
+      "mean_queue_length": 11.56,
+      "profile": "balanced",
+      "seed": 99,
+      "throughput_per_minute": 60.8,
+      "total_arrivals": 624,
+      "total_departures": 608,
+      "total_stops": 624,
+      "validation_interventions": 0,
+      "waiting_seconds_by_approach": {
+        "east": 423,
+        "north": 431,
+        "south": 431,
+        "west": 425
+      }
+    },
+    {
+      "accumulated_delay": 2270,
+      "controller": "fixed_time",
+      "duration_seconds": 120,
+      "fairness_index": 0.9855,
+      "final_queue_length": 23,
+      "maximum_queue_by_approach": {
+        "east": 7,
+        "north": 23,
+        "south": 14,
+        "west": 3
+      },
+      "maximum_queue_length": 33,
+      "mean_queue_length": 18.92,
+      "profile": "north_south_heavy",
+      "seed": 7,
+      "throughput_per_minute": 62.5,
+      "total_arrivals": 148,
+      "total_departures": 125,
+      "total_stops": 148,
+      "validation_interventions": 0,
+      "waiting_seconds_by_approach": {
+        "east": 77,
+        "north": 101,
+        "south": 87,
+        "west": 75
+      }
+    },
+    {
+      "accumulated_delay": 2270,
+      "controller": "queue_aware",
+      "duration_seconds": 120,
+      "fairness_index": 0.9855,
+      "final_queue_length": 23,
+      "maximum_queue_by_approach": {
+        "east": 7,
+        "north": 23,
+        "south": 14,
+        "west": 3
+      },
+      "maximum_queue_length": 33,
+      "mean_queue_length": 18.92,
+      "profile": "north_south_heavy",
+      "seed": 7,
+      "throughput_per_minute": 62.5,
+      "total_arrivals": 148,
+      "total_departures": 125,
+      "total_stops": 148,
+      "validation_interventions": 0,
+      "waiting_seconds_by_approach": {
+        "east": 77,
+        "north": 101,
+        "south": 87,
+        "west": 75
+      }
+    },
+    {
+      "accumulated_delay": 2076,
+      "controller": "fixed_time",
+      "duration_seconds": 120,
+      "fairness_index": 0.9746,
+      "final_queue_length": 22,
+      "maximum_queue_by_approach": {
+        "east": 7,
+        "north": 14,
+        "south": 17,
+        "west": 7
+      },
+      "maximum_queue_length": 33,
+      "mean_queue_length": 17.3,
+      "profile": "north_south_heavy",
+      "seed": 17,
+      "throughput_per_minute": 59.0,
+      "total_arrivals": 140,
+      "total_departures": 118,
+      "total_stops": 140,
+      "validation_interventions": 0,
+      "waiting_seconds_by_approach": {
+        "east": 68,
+        "north": 99,
+        "south": 101,
+        "west": 78
+      }
+    },
+    {
+      "accumulated_delay": 2076,
+      "controller": "queue_aware",
+      "duration_seconds": 120,
+      "fairness_index": 0.9746,
+      "final_queue_length": 22,
+      "maximum_queue_by_approach": {
+        "east": 7,
+        "north": 14,
+        "south": 17,
+        "west": 7
+      },
+      "maximum_queue_length": 33,
+      "mean_queue_length": 17.3,
+      "profile": "north_south_heavy",
+      "seed": 17,
+      "throughput_per_minute": 59.0,
+      "total_arrivals": 140,
+      "total_departures": 118,
+      "total_stops": 140,
+      "validation_interventions": 0,
+      "waiting_seconds_by_approach": {
+        "east": 68,
+        "north": 99,
+        "south": 101,
+        "west": 78
+      }
+    },
+    {
+      "accumulated_delay": 1313,
+      "controller": "fixed_time",
+      "duration_seconds": 120,
+      "fairness_index": 0.9501,
+      "final_queue_length": 8,
+      "maximum_queue_by_approach": {
+        "east": 5,
+        "north": 10,
+        "south": 14,
+        "west": 7
+      },
+      "maximum_queue_length": 23,
+      "mean_queue_length": 10.94,
+      "profile": "north_south_heavy",
+      "seed": 23,
+      "throughput_per_minute": 53.5,
+      "total_arrivals": 115,
+      "total_departures": 107,
+      "total_stops": 115,
+      "validation_interventions": 0,
+      "waiting_seconds_by_approach": {
+        "east": 46,
+        "north": 86,
+        "south": 89,
+        "west": 82
+      }
+    },
+    {
+      "accumulated_delay": 1313,
+      "controller": "queue_aware",
+      "duration_seconds": 120,
+      "fairness_index": 0.9501,
+      "final_queue_length": 8,
+      "maximum_queue_by_approach": {
+        "east": 5,
+        "north": 10,
+        "south": 14,
+        "west": 7
+      },
+      "maximum_queue_length": 23,
+      "mean_queue_length": 10.94,
+      "profile": "north_south_heavy",
+      "seed": 23,
+      "throughput_per_minute": 53.5,
+      "total_arrivals": 115,
+      "total_departures": 107,
+      "total_stops": 115,
+      "validation_interventions": 0,
+      "waiting_seconds_by_approach": {
+        "east": 46,
+        "north": 86,
+        "south": 89,
+        "west": 82
+      }
+    },
+    {
+      "accumulated_delay": 1316,
+      "controller": "fixed_time",
+      "duration_seconds": 120,
+      "fairness_index": 0.9852,
+      "final_queue_length": 8,
+      "maximum_queue_by_approach": {
+        "east": 5,
+        "north": 12,
+        "south": 13,
+        "west": 5
+      },
+      "maximum_queue_length": 22,
+      "mean_queue_length": 10.97,
+      "profile": "north_south_heavy",
+      "seed": 42,
+      "throughput_per_minute": 57.5,
+      "total_arrivals": 123,
+      "total_departures": 115,
+      "total_stops": 123,
+      "validation_interventions": 0,
+      "waiting_seconds_by_approach": {
+        "east": 64,
+        "north": 85,
+        "south": 90,
+        "west": 79
+      }
+    },
+    {
+      "accumulated_delay": 1316,
+      "controller": "queue_aware",
+      "duration_seconds": 120,
+      "fairness_index": 0.9852,
+      "final_queue_length": 8,
+      "maximum_queue_by_approach": {
+        "east": 5,
+        "north": 12,
+        "south": 13,
+        "west": 5
+      },
+      "maximum_queue_length": 22,
+      "mean_queue_length": 10.97,
+      "profile": "north_south_heavy",
+      "seed": 42,
+      "throughput_per_minute": 57.5,
+      "total_arrivals": 123,
+      "total_departures": 115,
+      "total_stops": 123,
+      "validation_interventions": 0,
+      "waiting_seconds_by_approach": {
+        "east": 64,
+        "north": 85,
+        "south": 90,
+        "west": 79
+      }
+    },
+    {
+      "accumulated_delay": 1851,
+      "controller": "fixed_time",
+      "duration_seconds": 120,
+      "fairness_index": 0.9783,
+      "final_queue_length": 19,
+      "maximum_queue_by_approach": {
+        "east": 6,
+        "north": 13,
+        "south": 14,
+        "west": 6
+      },
+      "maximum_queue_length": 28,
+      "mean_queue_length": 15.43,
+      "profile": "north_south_heavy",
+      "seed": 99,
+      "throughput_per_minute": 62.0,
+      "total_arrivals": 143,
+      "total_departures": 124,
+      "total_stops": 143,
+      "validation_interventions": 0,
+      "waiting_seconds_by_approach": {
+        "east": 79,
+        "north": 101,
+        "south": 93,
+        "west": 68
+      }
+    },
+    {
+      "accumulated_delay": 1734,
+      "controller": "queue_aware",
+      "duration_seconds": 120,
+      "fairness_index": 0.9872,
+      "final_queue_length": 19,
+      "maximum_queue_by_approach": {
+        "east": 7,
+        "north": 13,
+        "south": 14,
+        "west": 6
+      },
+      "maximum_queue_length": 28,
+      "mean_queue_length": 14.45,
+      "profile": "north_south_heavy",
+      "seed": 99,
+      "throughput_per_minute": 62.0,
+      "total_arrivals": 143,
+      "total_departures": 124,
+      "total_stops": 143,
+      "validation_interventions": 0,
+      "waiting_seconds_by_approach": {
+        "east": 80,
+        "north": 98,
+        "south": 88,
+        "west": 72
+      }
+    },
+    {
+      "accumulated_delay": 18079,
+      "controller": "fixed_time",
+      "duration_seconds": 600,
+      "fairness_index": 0.9408,
+      "final_queue_length": 32,
+      "maximum_queue_by_approach": {
+        "east": 7,
+        "north": 37,
+        "south": 14,
+        "west": 8
+      },
+      "maximum_queue_length": 47,
+      "mean_queue_length": 30.13,
+      "profile": "north_south_heavy",
+      "seed": 7,
+      "throughput_per_minute": 64.6,
+      "total_arrivals": 678,
+      "total_departures": 646,
+      "total_stops": 678,
+      "validation_interventions": 0,
+      "waiting_seconds_by_approach": {
+        "east": 351,
+        "north": 581,
+        "south": 528,
+        "west": 320
+      }
+    },
+    {
+      "accumulated_delay": 18079,
+      "controller": "queue_aware",
+      "duration_seconds": 600,
+      "fairness_index": 0.9408,
+      "final_queue_length": 32,
+      "maximum_queue_by_approach": {
+        "east": 7,
+        "north": 37,
+        "south": 14,
+        "west": 8
+      },
+      "maximum_queue_length": 47,
+      "mean_queue_length": 30.13,
+      "profile": "north_south_heavy",
+      "seed": 7,
+      "throughput_per_minute": 64.6,
+      "total_arrivals": 678,
+      "total_departures": 646,
+      "total_stops": 678,
+      "validation_interventions": 0,
+      "waiting_seconds_by_approach": {
+        "east": 351,
+        "north": 581,
+        "south": 528,
+        "west": 320
+      }
+    },
+    {
+      "accumulated_delay": 13771,
+      "controller": "fixed_time",
+      "duration_seconds": 600,
+      "fairness_index": 0.9142,
+      "final_queue_length": 19,
+      "maximum_queue_by_approach": {
+        "east": 7,
+        "north": 23,
+        "south": 22,
+        "west": 7
+      },
+      "maximum_queue_length": 44,
+      "mean_queue_length": 22.95,
+      "profile": "north_south_heavy",
+      "seed": 17,
+      "throughput_per_minute": 62.7,
+      "total_arrivals": 646,
+      "total_departures": 627,
+      "total_stops": 646,
+      "validation_interventions": 0,
+      "waiting_seconds_by_approach": {
+        "east": 265,
+        "north": 579,
+        "south": 543,
+        "west": 341
+      }
+    },
+    {
+      "accumulated_delay": 13771,
+      "controller": "queue_aware",
+      "duration_seconds": 600,
+      "fairness_index": 0.9142,
+      "final_queue_length": 19,
+      "maximum_queue_by_approach": {
+        "east": 7,
+        "north": 23,
+        "south": 22,
+        "west": 7
+      },
+      "maximum_queue_length": 44,
+      "mean_queue_length": 22.95,
+      "profile": "north_south_heavy",
+      "seed": 17,
+      "throughput_per_minute": 62.7,
+      "total_arrivals": 646,
+      "total_departures": 627,
+      "total_stops": 646,
+      "validation_interventions": 0,
+      "waiting_seconds_by_approach": {
+        "east": 265,
+        "north": 579,
+        "south": 543,
+        "west": 341
+      }
+    },
+    {
+      "accumulated_delay": 10349,
+      "controller": "fixed_time",
+      "duration_seconds": 600,
+      "fairness_index": 0.9522,
+      "final_queue_length": 30,
+      "maximum_queue_by_approach": {
+        "east": 8,
+        "north": 21,
+        "south": 20,
+        "west": 11
+      },
+      "maximum_queue_length": 34,
+      "mean_queue_length": 17.25,
+      "profile": "north_south_heavy",
+      "seed": 23,
+      "throughput_per_minute": 61.9,
+      "total_arrivals": 649,
+      "total_departures": 619,
+      "total_stops": 649,
+      "validation_interventions": 0,
+      "waiting_seconds_by_approach": {
+        "east": 326,
+        "north": 548,
+        "south": 529,
+        "west": 360
+      }
+    },
+    {
+      "accumulated_delay": 10349,
+      "controller": "queue_aware",
+      "duration_seconds": 600,
+      "fairness_index": 0.9522,
+      "final_queue_length": 30,
+      "maximum_queue_by_approach": {
+        "east": 8,
+        "north": 21,
+        "south": 20,
+        "west": 11
+      },
+      "maximum_queue_length": 34,
+      "mean_queue_length": 17.25,
+      "profile": "north_south_heavy",
+      "seed": 23,
+      "throughput_per_minute": 61.9,
+      "total_arrivals": 649,
+      "total_departures": 619,
+      "total_stops": 649,
+      "validation_interventions": 0,
+      "waiting_seconds_by_approach": {
+        "east": 326,
+        "north": 548,
+        "south": 529,
+        "west": 360
+      }
+    },
+    {
+      "accumulated_delay": 10773,
+      "controller": "fixed_time",
+      "duration_seconds": 600,
+      "fairness_index": 0.9042,
+      "final_queue_length": 25,
+      "maximum_queue_by_approach": {
+        "east": 7,
+        "north": 15,
+        "south": 21,
+        "west": 5
+      },
+      "maximum_queue_length": 35,
+      "mean_queue_length": 17.95,
+      "profile": "north_south_heavy",
+      "seed": 42,
+      "throughput_per_minute": 61.1,
+      "total_arrivals": 636,
+      "total_departures": 611,
+      "total_stops": 636,
+      "validation_interventions": 0,
+      "waiting_seconds_by_approach": {
+        "east": 298,
+        "north": 546,
+        "south": 557,
+        "west": 265
+      }
+    },
+    {
+      "accumulated_delay": 10773,
+      "controller": "queue_aware",
+      "duration_seconds": 600,
+      "fairness_index": 0.9042,
+      "final_queue_length": 25,
+      "maximum_queue_by_approach": {
+        "east": 7,
+        "north": 15,
+        "south": 21,
+        "west": 5
+      },
+      "maximum_queue_length": 35,
+      "mean_queue_length": 17.95,
+      "profile": "north_south_heavy",
+      "seed": 42,
+      "throughput_per_minute": 61.1,
+      "total_arrivals": 636,
+      "total_departures": 611,
+      "total_stops": 636,
+      "validation_interventions": 0,
+      "waiting_seconds_by_approach": {
+        "east": 298,
+        "north": 546,
+        "south": 557,
+        "west": 265
+      }
+    },
+    {
+      "accumulated_delay": 15324,
+      "controller": "fixed_time",
+      "duration_seconds": 600,
+      "fairness_index": 0.9385,
+      "final_queue_length": 30,
+      "maximum_queue_by_approach": {
+        "east": 7,
+        "north": 23,
+        "south": 21,
+        "west": 6
+      },
+      "maximum_queue_length": 43,
+      "mean_queue_length": 25.54,
+      "profile": "north_south_heavy",
+      "seed": 99,
+      "throughput_per_minute": 65.1,
+      "total_arrivals": 681,
+      "total_departures": 651,
+      "total_stops": 681,
+      "validation_interventions": 0,
+      "waiting_seconds_by_approach": {
+        "east": 337,
+        "north": 581,
+        "south": 573,
+        "west": 347
+      }
+    },
+    {
+      "accumulated_delay": 13930,
+      "controller": "queue_aware",
+      "duration_seconds": 600,
+      "fairness_index": 0.9293,
+      "final_queue_length": 28,
+      "maximum_queue_by_approach": {
+        "east": 7,
+        "north": 21,
+        "south": 21,
+        "west": 6
+      },
+      "maximum_queue_length": 40,
+      "mean_queue_length": 23.22,
+      "profile": "north_south_heavy",
+      "seed": 99,
+      "throughput_per_minute": 65.3,
+      "total_arrivals": 681,
+      "total_departures": 653,
+      "total_stops": 681,
+      "validation_interventions": 0,
+      "waiting_seconds_by_approach": {
+        "east": 299,
+        "north": 578,
+        "south": 568,
+        "west": 357
+      }
+    },
+    {
+      "accumulated_delay": 1703,
+      "controller": "fixed_time",
+      "duration_seconds": 120,
+      "fairness_index": 0.8916,
+      "final_queue_length": 22,
+      "maximum_queue_by_approach": {
+        "east": 14,
+        "north": 8,
+        "south": 6,
+        "west": 11
+      },
+      "maximum_queue_length": 27,
+      "mean_queue_length": 14.19,
+      "profile": "east_west_heavy",
+      "seed": 7,
+      "throughput_per_minute": 60.5,
+      "total_arrivals": 143,
+      "total_departures": 121,
+      "total_stops": 143,
+      "validation_interventions": 0,
+      "waiting_seconds_by_approach": {
+        "east": 117,
+        "north": 65,
+        "south": 47,
+        "west": 110
+      }
+    },
+    {
+      "accumulated_delay": 1719,
+      "controller": "queue_aware",
+      "duration_seconds": 120,
+      "fairness_index": 0.9702,
+      "final_queue_length": 17,
+      "maximum_queue_by_approach": {
+        "east": 11,
+        "north": 9,
+        "south": 6,
+        "west": 10
+      },
+      "maximum_queue_length": 23,
+      "mean_queue_length": 14.32,
+      "profile": "east_west_heavy",
+      "seed": 7,
+      "throughput_per_minute": 63.0,
+      "total_arrivals": 143,
+      "total_departures": 126,
+      "total_stops": 143,
+      "validation_interventions": 0,
+      "waiting_seconds_by_approach": {
+        "east": 100,
+        "north": 79,
+        "south": 66,
+        "west": 103
+      }
+    },
+    {
+      "accumulated_delay": 1578,
+      "controller": "fixed_time",
+      "duration_seconds": 120,
+      "fairness_index": 0.9455,
+      "final_queue_length": 21,
+      "maximum_queue_by_approach": {
+        "east": 13,
+        "north": 4,
+        "south": 7,
+        "west": 11
+      },
+      "maximum_queue_length": 24,
+      "mean_queue_length": 13.15,
+      "profile": "east_west_heavy",
+      "seed": 17,
+      "throughput_per_minute": 53.5,
+      "total_arrivals": 128,
+      "total_departures": 107,
+      "total_stops": 128,
+      "validation_interventions": 0,
+      "waiting_seconds_by_approach": {
+        "east": 104,
+        "north": 61,
+        "south": 69,
+        "west": 107
+      }
+    },
+    {
+      "accumulated_delay": 1501,
+      "controller": "queue_aware",
+      "duration_seconds": 120,
+      "fairness_index": 0.9719,
+      "final_queue_length": 20,
+      "maximum_queue_by_approach": {
+        "east": 13,
+        "north": 6,
+        "south": 10,
+        "west": 7
+      },
+      "maximum_queue_length": 21,
+      "mean_queue_length": 12.51,
+      "profile": "east_west_heavy",
+      "seed": 17,
+      "throughput_per_minute": 54.0,
+      "total_arrivals": 128,
+      "total_departures": 108,
+      "total_stops": 128,
+      "validation_interventions": 0,
+      "waiting_seconds_by_approach": {
+        "east": 101,
+        "north": 63,
+        "south": 77,
+        "west": 88
+      }
+    },
+    {
+      "accumulated_delay": 1499,
+      "controller": "fixed_time",
+      "duration_seconds": 120,
+      "fairness_index": 0.9262,
+      "final_queue_length": 12,
+      "maximum_queue_by_approach": {
+        "east": 11,
+        "north": 6,
+        "south": 8,
+        "west": 13
+      },
+      "maximum_queue_length": 25,
+      "mean_queue_length": 12.49,
+      "profile": "east_west_heavy",
+      "seed": 23,
+      "throughput_per_minute": 56.5,
+      "total_arrivals": 125,
+      "total_departures": 113,
+      "total_stops": 125,
+      "validation_interventions": 0,
+      "waiting_seconds_by_approach": {
+        "east": 100,
+        "north": 52,
+        "south": 66,
+        "west": 107
+      }
+    },
+    {
+      "accumulated_delay": 1431,
+      "controller": "queue_aware",
+      "duration_seconds": 120,
+      "fairness_index": 0.9731,
+      "final_queue_length": 10,
+      "maximum_queue_by_approach": {
+        "east": 10,
+        "north": 5,
+        "south": 6,
+        "west": 14
+      },
+      "maximum_queue_length": 26,
+      "mean_queue_length": 11.93,
+      "profile": "east_west_heavy",
+      "seed": 23,
+      "throughput_per_minute": 57.5,
+      "total_arrivals": 125,
+      "total_departures": 115,
+      "total_stops": 125,
+      "validation_interventions": 0,
+      "waiting_seconds_by_approach": {
+        "east": 90,
+        "north": 61,
+        "south": 75,
+        "west": 95
+      }
+    },
+    {
+      "accumulated_delay": 1943,
+      "controller": "fixed_time",
+      "duration_seconds": 120,
+      "fairness_index": 0.902,
+      "final_queue_length": 18,
+      "maximum_queue_by_approach": {
+        "east": 13,
+        "north": 6,
+        "south": 6,
+        "west": 13
+      },
+      "maximum_queue_length": 27,
+      "mean_queue_length": 16.19,
+      "profile": "east_west_heavy",
+      "seed": 42,
+      "throughput_per_minute": 57.0,
+      "total_arrivals": 132,
+      "total_departures": 114,
+      "total_stops": 132,
+      "validation_interventions": 0,
+      "waiting_seconds_by_approach": {
+        "east": 120,
+        "north": 60,
+        "south": 60,
+        "west": 118
+      }
+    },
+    {
+      "accumulated_delay": 1745,
+      "controller": "queue_aware",
+      "duration_seconds": 120,
+      "fairness_index": 0.9637,
+      "final_queue_length": 15,
+      "maximum_queue_by_approach": {
+        "east": 13,
+        "north": 7,
+        "south": 4,
+        "west": 12
+      },
+      "maximum_queue_length": 27,
+      "mean_queue_length": 14.54,
+      "profile": "east_west_heavy",
+      "seed": 42,
+      "throughput_per_minute": 58.5,
+      "total_arrivals": 132,
+      "total_departures": 117,
+      "total_stops": 132,
+      "validation_interventions": 0,
+      "waiting_seconds_by_approach": {
+        "east": 108,
+        "north": 75,
+        "south": 67,
+        "west": 100
+      }
+    },
+    {
+      "accumulated_delay": 1764,
+      "controller": "fixed_time",
+      "duration_seconds": 120,
+      "fairness_index": 0.9111,
+      "final_queue_length": 24,
+      "maximum_queue_by_approach": {
+        "east": 12,
+        "north": 4,
+        "south": 3,
+        "west": 15
+      },
+      "maximum_queue_length": 28,
+      "mean_queue_length": 14.7,
+      "profile": "east_west_heavy",
+      "seed": 99,
+      "throughput_per_minute": 54.0,
+      "total_arrivals": 132,
+      "total_departures": 108,
+      "total_stops": 132,
+      "validation_interventions": 0,
+      "waiting_seconds_by_approach": {
+        "east": 114,
+        "north": 61,
+        "south": 58,
+        "west": 113
+      }
+    },
+    {
+      "accumulated_delay": 1601,
+      "controller": "queue_aware",
+      "duration_seconds": 120,
+      "fairness_index": 0.9705,
+      "final_queue_length": 19,
+      "maximum_queue_by_approach": {
+        "east": 12,
+        "north": 6,
+        "south": 4,
+        "west": 13
+      },
+      "maximum_queue_length": 26,
+      "mean_queue_length": 13.34,
+      "profile": "east_west_heavy",
+      "seed": 99,
+      "throughput_per_minute": 56.5,
+      "total_arrivals": 132,
+      "total_departures": 113,
+      "total_stops": 132,
+      "validation_interventions": 0,
+      "waiting_seconds_by_approach": {
+        "east": 101,
+        "north": 73,
+        "south": 68,
+        "west": 99
+      }
+    },
+    {
+      "accumulated_delay": 18004,
+      "controller": "fixed_time",
+      "duration_seconds": 600,
+      "fairness_index": 0.9376,
+      "final_queue_length": 48,
+      "maximum_queue_by_approach": {
+        "east": 21,
+        "north": 8,
+        "south": 6,
+        "west": 33
+      },
+      "maximum_queue_length": 53,
+      "mean_queue_length": 30.01,
+      "profile": "east_west_heavy",
+      "seed": 7,
+      "throughput_per_minute": 66.7,
+      "total_arrivals": 715,
+      "total_departures": 667,
+      "total_stops": 715,
+      "validation_interventions": 0,
+      "waiting_seconds_by_approach": {
+        "east": 571,
+        "north": 364,
+        "south": 324,
+        "west": 590
+      }
+    },
+    {
+      "accumulated_delay": 17387,
+      "controller": "queue_aware",
+      "duration_seconds": 600,
+      "fairness_index": 0.9341,
+      "final_queue_length": 49,
+      "maximum_queue_by_approach": {
+        "east": 25,
+        "north": 9,
+        "south": 6,
+        "west": 34
+      },
+      "maximum_queue_length": 55,
+      "mean_queue_length": 28.98,
+      "profile": "east_west_heavy",
+      "seed": 7,
+      "throughput_per_minute": 66.6,
+      "total_arrivals": 715,
+      "total_departures": 666,
+      "total_stops": 715,
+      "validation_interventions": 0,
+      "waiting_seconds_by_approach": {
+        "east": 560,
+        "north": 330,
+        "south": 334,
+        "west": 583
+      }
+    },
+    {
+      "accumulated_delay": 11224,
+      "controller": "fixed_time",
+      "duration_seconds": 600,
+      "fairness_index": 0.9143,
+      "final_queue_length": 9,
+      "maximum_queue_by_approach": {
+        "east": 15,
+        "north": 7,
+        "south": 7,
+        "west": 22
+      },
+      "maximum_queue_length": 32,
+      "mean_queue_length": 18.71,
+      "profile": "east_west_heavy",
+      "seed": 17,
+      "throughput_per_minute": 62.7,
+      "total_arrivals": 636,
+      "total_departures": 627,
+      "total_stops": 636,
+      "validation_interventions": 0,
+      "waiting_seconds_by_approach": {
+        "east": 553,
+        "north": 337,
+        "south": 270,
+        "west": 576
+      }
+    },
+    {
+      "accumulated_delay": 11480,
+      "controller": "queue_aware",
+      "duration_seconds": 600,
+      "fairness_index": 0.9236,
+      "final_queue_length": 9,
+      "maximum_queue_by_approach": {
+        "east": 15,
+        "north": 6,
+        "south": 10,
+        "west": 22
+      },
+      "maximum_queue_length": 36,
+      "mean_queue_length": 19.13,
+      "profile": "east_west_heavy",
+      "seed": 17,
+      "throughput_per_minute": 62.7,
+      "total_arrivals": 636,
+      "total_departures": 627,
+      "total_stops": 636,
+      "validation_interventions": 0,
+      "waiting_seconds_by_approach": {
+        "east": 552,
+        "north": 292,
+        "south": 323,
+        "west": 557
+      }
+    },
+    {
+      "accumulated_delay": 14060,
+      "controller": "fixed_time",
+      "duration_seconds": 600,
+      "fairness_index": 0.9394,
+      "final_queue_length": 26,
+      "maximum_queue_by_approach": {
+        "east": 25,
+        "north": 7,
+        "south": 8,
+        "west": 21
+      },
+      "maximum_queue_length": 47,
+      "mean_queue_length": 23.43,
+      "profile": "east_west_heavy",
+      "seed": 23,
+      "throughput_per_minute": 65.3,
+      "total_arrivals": 679,
+      "total_departures": 653,
+      "total_stops": 679,
+      "validation_interventions": 0,
+      "waiting_seconds_by_approach": {
+        "east": 565,
+        "north": 352,
+        "south": 331,
+        "west": 581
+      }
+    },
+    {
+      "accumulated_delay": 14211,
+      "controller": "queue_aware",
+      "duration_seconds": 600,
+      "fairness_index": 0.9306,
+      "final_queue_length": 33,
+      "maximum_queue_by_approach": {
+        "east": 24,
+        "north": 8,
+        "south": 6,
+        "west": 22
+      },
+      "maximum_queue_length": 50,
+      "mean_queue_length": 23.68,
+      "profile": "east_west_heavy",
+      "seed": 23,
+      "throughput_per_minute": 64.6,
+      "total_arrivals": 679,
+      "total_departures": 646,
+      "total_stops": 679,
+      "validation_interventions": 0,
+      "waiting_seconds_by_approach": {
+        "east": 560,
+        "north": 310,
+        "south": 340,
+        "west": 575
+      }
+    },
+    {
+      "accumulated_delay": 8739,
+      "controller": "fixed_time",
+      "duration_seconds": 600,
+      "fairness_index": 0.9654,
+      "final_queue_length": 11,
+      "maximum_queue_by_approach": {
+        "east": 18,
+        "north": 9,
+        "south": 9,
+        "west": 16
+      },
+      "maximum_queue_length": 28,
+      "mean_queue_length": 14.56,
+      "profile": "east_west_heavy",
+      "seed": 42,
+      "throughput_per_minute": 62.4,
+      "total_arrivals": 635,
+      "total_departures": 624,
+      "total_stops": 635,
+      "validation_interventions": 0,
+      "waiting_seconds_by_approach": {
+        "east": 538,
+        "north": 363,
+        "south": 366,
+        "west": 531
+      }
+    },
+    {
+      "accumulated_delay": 8669,
+      "controller": "queue_aware",
+      "duration_seconds": 600,
+      "fairness_index": 0.9636,
+      "final_queue_length": 14,
+      "maximum_queue_by_approach": {
+        "east": 16,
+        "north": 9,
+        "south": 9,
+        "west": 15
+      },
+      "maximum_queue_length": 28,
+      "mean_queue_length": 14.45,
+      "profile": "east_west_heavy",
+      "seed": 42,
+      "throughput_per_minute": 62.1,
+      "total_arrivals": 635,
+      "total_departures": 621,
+      "total_stops": 635,
+      "validation_interventions": 0,
+      "waiting_seconds_by_approach": {
+        "east": 549,
+        "north": 358,
+        "south": 358,
+        "west": 506
+      }
+    },
+    {
+      "accumulated_delay": 13496,
+      "controller": "fixed_time",
+      "duration_seconds": 600,
+      "fairness_index": 0.9396,
+      "final_queue_length": 14,
+      "maximum_queue_by_approach": {
+        "east": 29,
+        "north": 7,
+        "south": 7,
+        "west": 17
+      },
+      "maximum_queue_length": 46,
+      "mean_queue_length": 22.49,
+      "profile": "east_west_heavy",
+      "seed": 99,
+      "throughput_per_minute": 65.7,
+      "total_arrivals": 671,
+      "total_departures": 657,
+      "total_stops": 671,
+      "validation_interventions": 0,
+      "waiting_seconds_by_approach": {
+        "east": 594,
+        "north": 360,
+        "south": 336,
+        "west": 572
+      }
+    },
+    {
+      "accumulated_delay": 13684,
+      "controller": "queue_aware",
+      "duration_seconds": 600,
+      "fairness_index": 0.945,
+      "final_queue_length": 16,
+      "maximum_queue_by_approach": {
+        "east": 27,
+        "north": 7,
+        "south": 8,
+        "west": 17
+      },
+      "maximum_queue_length": 41,
+      "mean_queue_length": 22.81,
+      "profile": "east_west_heavy",
+      "seed": 99,
+      "throughput_per_minute": 65.5,
+      "total_arrivals": 671,
+      "total_departures": 655,
+      "total_stops": 671,
+      "validation_interventions": 0,
+      "waiting_seconds_by_approach": {
+        "east": 581,
+        "north": 340,
+        "south": 356,
+        "west": 555
+      }
+    },
+    {
+      "accumulated_delay": 3964,
+      "controller": "fixed_time",
+      "duration_seconds": 120,
+      "fairness_index": 0.9929,
+      "final_queue_length": 48,
+      "maximum_queue_by_approach": {
+        "east": 14,
+        "north": 27,
+        "south": 15,
+        "west": 12
+      },
+      "maximum_queue_length": 52,
+      "mean_queue_length": 33.03,
+      "profile": "stress",
+      "seed": 7,
+      "throughput_per_minute": 90.0,
+      "total_arrivals": 228,
+      "total_departures": 180,
+      "total_stops": 228,
+      "validation_interventions": 0,
+      "waiting_seconds_by_approach": {
+        "east": 118,
+        "north": 101,
+        "south": 100,
+        "west": 120
+      }
+    },
+    {
+      "accumulated_delay": 4049,
+      "controller": "queue_aware",
+      "duration_seconds": 120,
+      "fairness_index": 0.9967,
+      "final_queue_length": 52,
+      "maximum_queue_by_approach": {
+        "east": 13,
+        "north": 30,
+        "south": 18,
+        "west": 12
+      },
+      "maximum_queue_length": 55,
+      "mean_queue_length": 33.74,
+      "profile": "stress",
+      "seed": 7,
+      "throughput_per_minute": 88.0,
+      "total_arrivals": 228,
+      "total_departures": 176,
+      "total_stops": 228,
+      "validation_interventions": 0,
+      "waiting_seconds_by_approach": {
+        "east": 109,
+        "north": 101,
+        "south": 100,
+        "west": 115
+      }
+    },
+    {
+      "accumulated_delay": 4050,
+      "controller": "fixed_time",
+      "duration_seconds": 120,
+      "fairness_index": 0.9973,
+      "final_queue_length": 55,
+      "maximum_queue_by_approach": {
+        "east": 14,
+        "north": 17,
+        "south": 23,
+        "west": 15
+      },
+      "maximum_queue_length": 57,
+      "mean_queue_length": 33.75,
+      "profile": "stress",
+      "seed": 17,
+      "throughput_per_minute": 84.0,
+      "total_arrivals": 223,
+      "total_departures": 168,
+      "total_stops": 223,
+      "validation_interventions": 0,
+      "waiting_seconds_by_approach": {
+        "east": 111,
+        "north": 100,
+        "south": 101,
+        "west": 112
+      }
+    },
+    {
+      "accumulated_delay": 4050,
+      "controller": "queue_aware",
+      "duration_seconds": 120,
+      "fairness_index": 0.9973,
+      "final_queue_length": 55,
+      "maximum_queue_by_approach": {
+        "east": 14,
+        "north": 17,
+        "south": 23,
+        "west": 15
+      },
+      "maximum_queue_length": 57,
+      "mean_queue_length": 33.75,
+      "profile": "stress",
+      "seed": 17,
+      "throughput_per_minute": 84.0,
+      "total_arrivals": 223,
+      "total_departures": 168,
+      "total_stops": 223,
+      "validation_interventions": 0,
+      "waiting_seconds_by_approach": {
+        "east": 111,
+        "north": 100,
+        "south": 101,
+        "west": 112
+      }
+    },
+    {
+      "accumulated_delay": 3323,
+      "controller": "fixed_time",
+      "duration_seconds": 120,
+      "fairness_index": 0.9934,
+      "final_queue_length": 28,
+      "maximum_queue_by_approach": {
+        "east": 14,
+        "north": 12,
+        "south": 16,
+        "west": 20
+      },
+      "maximum_queue_length": 40,
+      "mean_queue_length": 27.69,
+      "profile": "stress",
+      "seed": 23,
+      "throughput_per_minute": 87.5,
+      "total_arrivals": 203,
+      "total_departures": 175,
+      "total_stops": 203,
+      "validation_interventions": 0,
+      "waiting_seconds_by_approach": {
+        "east": 110,
+        "north": 99,
+        "south": 99,
+        "west": 120
+      }
+    },
+    {
+      "accumulated_delay": 3362,
+      "controller": "queue_aware",
+      "duration_seconds": 120,
+      "fairness_index": 0.9939,
+      "final_queue_length": 29,
+      "maximum_queue_by_approach": {
+        "east": 14,
+        "north": 17,
+        "south": 17,
+        "west": 17
+      },
+      "maximum_queue_length": 41,
+      "mean_queue_length": 28.02,
+      "profile": "stress",
+      "seed": 23,
+      "throughput_per_minute": 87.0,
+      "total_arrivals": 203,
+      "total_departures": 174,
+      "total_stops": 203,
+      "validation_interventions": 0,
+      "waiting_seconds_by_approach": {
+        "east": 102,
+        "north": 100,
+        "south": 101,
+        "west": 120
+      }
+    },
+    {
+      "accumulated_delay": 3597,
+      "controller": "fixed_time",
+      "duration_seconds": 120,
+      "fairness_index": 0.9893,
+      "final_queue_length": 40,
+      "maximum_queue_by_approach": {
+        "east": 17,
+        "north": 15,
+        "south": 13,
+        "west": 14
+      },
+      "maximum_queue_length": 42,
+      "mean_queue_length": 29.98,
+      "profile": "stress",
+      "seed": 42,
+      "throughput_per_minute": 89.0,
+      "total_arrivals": 218,
+      "total_departures": 178,
+      "total_stops": 218,
+      "validation_interventions": 0,
+      "waiting_seconds_by_approach": {
+        "east": 120,
+        "north": 99,
+        "south": 96,
+        "west": 120
+      }
+    },
+    {
+      "accumulated_delay": 3637,
+      "controller": "queue_aware",
+      "duration_seconds": 120,
+      "fairness_index": 0.9956,
+      "final_queue_length": 38,
+      "maximum_queue_by_approach": {
+        "east": 14,
+        "north": 19,
+        "south": 16,
+        "west": 12
+      },
+      "maximum_queue_length": 43,
+      "mean_queue_length": 30.31,
+      "profile": "stress",
+      "seed": 42,
+      "throughput_per_minute": 90.0,
+      "total_arrivals": 218,
+      "total_departures": 180,
+      "total_stops": 218,
+      "validation_interventions": 0,
+      "waiting_seconds_by_approach": {
+        "east": 115,
+        "north": 99,
+        "south": 100,
+        "west": 112
+      }
+    },
+    {
+      "accumulated_delay": 4056,
+      "controller": "fixed_time",
+      "duration_seconds": 120,
+      "fairness_index": 0.9924,
+      "final_queue_length": 57,
+      "maximum_queue_by_approach": {
+        "east": 15,
+        "north": 18,
+        "south": 15,
+        "west": 19
+      },
+      "maximum_queue_length": 58,
+      "mean_queue_length": 33.8,
+      "profile": "stress",
+      "seed": 99,
+      "throughput_per_minute": 90.0,
+      "total_arrivals": 237,
+      "total_departures": 180,
+      "total_stops": 237,
+      "validation_interventions": 0,
+      "waiting_seconds_by_approach": {
+        "east": 120,
+        "north": 101,
+        "south": 99,
+        "west": 118
+      }
+    },
+    {
+      "accumulated_delay": 4272,
+      "controller": "queue_aware",
+      "duration_seconds": 120,
+      "fairness_index": 0.9965,
+      "final_queue_length": 62,
+      "maximum_queue_by_approach": {
+        "east": 17,
+        "north": 23,
+        "south": 18,
+        "west": 17
+      },
+      "maximum_queue_length": 62,
+      "mean_queue_length": 35.6,
+      "profile": "stress",
+      "seed": 99,
+      "throughput_per_minute": 87.5,
+      "total_arrivals": 237,
+      "total_departures": 175,
+      "total_stops": 237,
+      "validation_interventions": 0,
+      "waiting_seconds_by_approach": {
+        "east": 115,
+        "north": 101,
+        "south": 101,
+        "west": 112
+      }
+    },
+    {
+      "accumulated_delay": 54604,
+      "controller": "fixed_time",
+      "duration_seconds": 600,
+      "fairness_index": 0.9998,
+      "final_queue_length": 158,
+      "maximum_queue_by_approach": {
+        "east": 36,
+        "north": 54,
+        "south": 26,
+        "west": 54
+      },
+      "maximum_queue_length": 158,
+      "mean_queue_length": 91.01,
+      "profile": "stress",
+      "seed": 7,
+      "throughput_per_minute": 97.0,
+      "total_arrivals": 1128,
+      "total_departures": 970,
+      "total_stops": 1128,
+      "validation_interventions": 0,
+      "waiting_seconds_by_approach": {
+        "east": 590,
+        "north": 581,
+        "south": 580,
+        "west": 600
+      }
+    },
+    {
+      "accumulated_delay": 55972,
+      "controller": "queue_aware",
+      "duration_seconds": 600,
+      "fairness_index": 0.9999,
+      "final_queue_length": 158,
+      "maximum_queue_by_approach": {
+        "east": 38,
+        "north": 56,
+        "south": 27,
+        "west": 53
+      },
+      "maximum_queue_length": 158,
+      "mean_queue_length": 93.29,
+      "profile": "stress",
+      "seed": 7,
+      "throughput_per_minute": 97.0,
+      "total_arrivals": 1128,
+      "total_departures": 970,
+      "total_stops": 1128,
+      "validation_interventions": 0,
+      "waiting_seconds_by_approach": {
+        "east": 581,
+        "north": 581,
+        "south": 580,
+        "west": 595
+      }
+    },
+    {
+      "accumulated_delay": 50710,
+      "controller": "fixed_time",
+      "duration_seconds": 600,
+      "fairness_index": 0.9999,
+      "final_queue_length": 125,
+      "maximum_queue_by_approach": {
+        "east": 28,
+        "north": 52,
+        "south": 33,
+        "west": 42
+      },
+      "maximum_queue_length": 132,
+      "mean_queue_length": 84.52,
+      "profile": "stress",
+      "seed": 17,
+      "throughput_per_minute": 96.0,
+      "total_arrivals": 1085,
+      "total_departures": 960,
+      "total_stops": 1085,
+      "validation_interventions": 0,
+      "waiting_seconds_by_approach": {
+        "east": 591,
+        "north": 580,
+        "south": 581,
+        "west": 592
+      }
+    },
+    {
+      "accumulated_delay": 50710,
+      "controller": "queue_aware",
+      "duration_seconds": 600,
+      "fairness_index": 0.9999,
+      "final_queue_length": 125,
+      "maximum_queue_by_approach": {
+        "east": 28,
+        "north": 52,
+        "south": 33,
+        "west": 42
+      },
+      "maximum_queue_length": 132,
+      "mean_queue_length": 84.52,
+      "profile": "stress",
+      "seed": 17,
+      "throughput_per_minute": 96.0,
+      "total_arrivals": 1085,
+      "total_departures": 960,
+      "total_stops": 1085,
+      "validation_interventions": 0,
+      "waiting_seconds_by_approach": {
+        "east": 591,
+        "north": 580,
+        "south": 581,
+        "west": 592
+      }
+    },
+    {
+      "accumulated_delay": 44842,
+      "controller": "fixed_time",
+      "duration_seconds": 600,
+      "fairness_index": 0.9996,
+      "final_queue_length": 132,
+      "maximum_queue_by_approach": {
+        "east": 43,
+        "north": 41,
+        "south": 28,
+        "west": 53
+      },
+      "maximum_queue_length": 136,
+      "mean_queue_length": 74.74,
+      "profile": "stress",
+      "seed": 23,
+      "throughput_per_minute": 95.5,
+      "total_arrivals": 1087,
+      "total_departures": 955,
+      "total_stops": 1087,
+      "validation_interventions": 0,
+      "waiting_seconds_by_approach": {
+        "east": 578,
+        "north": 568,
+        "south": 579,
+        "west": 600
+      }
+    },
+    {
+      "accumulated_delay": 44080,
+      "controller": "queue_aware",
+      "duration_seconds": 600,
+      "fairness_index": 0.9995,
+      "final_queue_length": 124,
+      "maximum_queue_by_approach": {
+        "east": 43,
+        "north": 38,
+        "south": 30,
+        "west": 48
+      },
+      "maximum_queue_length": 134,
+      "mean_queue_length": 73.47,
+      "profile": "stress",
+      "seed": 23,
+      "throughput_per_minute": 96.3,
+      "total_arrivals": 1087,
+      "total_departures": 963,
+      "total_stops": 1087,
+      "validation_interventions": 0,
+      "waiting_seconds_by_approach": {
+        "east": 568,
+        "north": 571,
+        "south": 581,
+        "west": 600
+      }
+    },
+    {
+      "accumulated_delay": 30427,
+      "controller": "fixed_time",
+      "duration_seconds": 600,
+      "fairness_index": 0.9997,
+      "final_queue_length": 89,
+      "maximum_queue_by_approach": {
+        "east": 29,
+        "north": 40,
+        "south": 28,
+        "west": 19
+      },
+      "maximum_queue_length": 92,
+      "mean_queue_length": 50.71,
+      "profile": "stress",
+      "seed": 42,
+      "throughput_per_minute": 95.9,
+      "total_arrivals": 1048,
+      "total_departures": 959,
+      "total_stops": 1048,
+      "validation_interventions": 0,
+      "waiting_seconds_by_approach": {
+        "east": 600,
+        "north": 579,
+        "south": 573,
+        "west": 579
+      }
+    },
+    {
+      "accumulated_delay": 32089,
+      "controller": "queue_aware",
+      "duration_seconds": 600,
+      "fairness_index": 0.9998,
+      "final_queue_length": 87,
+      "maximum_queue_by_approach": {
+        "east": 28,
+        "north": 43,
+        "south": 30,
+        "west": 18
+      },
+      "maximum_queue_length": 91,
+      "mean_queue_length": 53.48,
+      "profile": "stress",
+      "seed": 42,
+      "throughput_per_minute": 96.1,
+      "total_arrivals": 1048,
+      "total_departures": 961,
+      "total_stops": 1048,
+      "validation_interventions": 0,
+      "waiting_seconds_by_approach": {
+        "east": 586,
+        "north": 579,
+        "south": 580,
+        "west": 565
+      }
+    },
+    {
+      "accumulated_delay": 57616,
+      "controller": "fixed_time",
+      "duration_seconds": 600,
+      "fairness_index": 0.9997,
+      "final_queue_length": 157,
+      "maximum_queue_by_approach": {
+        "east": 52,
+        "north": 48,
+        "south": 49,
+        "west": 36
+      },
+      "maximum_queue_length": 160,
+      "mean_queue_length": 96.03,
+      "profile": "stress",
+      "seed": 99,
+      "throughput_per_minute": 97.2,
+      "total_arrivals": 1129,
+      "total_departures": 972,
+      "total_stops": 1129,
+      "validation_interventions": 0,
+      "waiting_seconds_by_approach": {
+        "east": 600,
+        "north": 581,
+        "south": 579,
+        "west": 598
+      }
+    },
+    {
+      "accumulated_delay": 59398,
+      "controller": "queue_aware",
+      "duration_seconds": 600,
+      "fairness_index": 0.9999,
+      "final_queue_length": 156,
+      "maximum_queue_by_approach": {
+        "east": 52,
+        "north": 49,
+        "south": 50,
+        "west": 34
+      },
+      "maximum_queue_length": 162,
+      "mean_queue_length": 99.0,
+      "profile": "stress",
+      "seed": 99,
+      "throughput_per_minute": 97.3,
+      "total_arrivals": 1129,
+      "total_departures": 973,
+      "total_stops": 1129,
+      "validation_interventions": 0,
+      "waiting_seconds_by_approach": {
+        "east": 595,
+        "north": 581,
+        "south": 581,
+        "west": 592
+      }
+    }
+  ],
+  "summaries": [
+    {
+      "controller": "fixed_time",
+      "duration_seconds": 120,
+      "mean_accumulated_delay": 1286.0,
+      "mean_fairness_index": 0.9782,
+      "mean_final_queue_length": 10.0,
+      "mean_maximum_queue_length": 19.2,
+      "mean_mean_queue_length": 10.718,
+      "mean_throughput_per_minute": 55.6,
+      "profile": "balanced",
+      "runs": 5,
+      "stdev_accumulated_delay": 103.6243,
+      "stdev_fairness_index": 0.0106,
+      "stdev_final_queue_length": 1.6733,
+      "stdev_maximum_queue_length": 1.3266,
+      "stdev_mean_queue_length": 0.862,
+      "stdev_throughput_per_minute": 3.7736
+    },
+    {
+      "controller": "queue_aware",
+      "duration_seconds": 120,
+      "mean_accumulated_delay": 1309.6,
+      "mean_fairness_index": 0.9845,
+      "mean_final_queue_length": 12.8,
+      "mean_maximum_queue_length": 19.6,
+      "mean_mean_queue_length": 10.914,
+      "mean_throughput_per_minute": 54.2,
+      "profile": "balanced",
+      "runs": 5,
+      "stdev_accumulated_delay": 97.9686,
+      "stdev_fairness_index": 0.012,
+      "stdev_final_queue_length": 2.4819,
+      "stdev_maximum_queue_length": 1.7436,
+      "stdev_mean_queue_length": 0.8169,
+      "stdev_throughput_per_minute": 3.7497
+    },
+    {
+      "controller": "fixed_time",
+      "duration_seconds": 600,
+      "mean_accumulated_delay": 6666.6,
+      "mean_fairness_index": 0.9981,
+      "mean_final_queue_length": 10.8,
+      "mean_maximum_queue_length": 23.6,
+      "mean_mean_queue_length": 11.114,
+      "mean_throughput_per_minute": 59.2,
+      "profile": "balanced",
+      "runs": 5,
+      "stdev_accumulated_delay": 578.7119,
+      "stdev_fairness_index": 0.0014,
+      "stdev_final_queue_length": 4.1183,
+      "stdev_maximum_queue_length": 2.4166,
+      "stdev_mean_queue_length": 0.9641,
+      "stdev_throughput_per_minute": 2.2786
+    },
+    {
+      "controller": "queue_aware",
+      "duration_seconds": 600,
+      "mean_accumulated_delay": 6662.2,
+      "mean_fairness_index": 0.9985,
+      "mean_final_queue_length": 11.8,
+      "mean_maximum_queue_length": 23.0,
+      "mean_mean_queue_length": 11.102,
+      "mean_throughput_per_minute": 59.1,
+      "profile": "balanced",
+      "runs": 5,
+      "stdev_accumulated_delay": 403.5926,
+      "stdev_fairness_index": 0.0015,
+      "stdev_final_queue_length": 4.49,
+      "stdev_maximum_queue_length": 1.8974,
+      "stdev_mean_queue_length": 0.6723,
+      "stdev_throughput_per_minute": 2.2521
+    },
+    {
+      "controller": "fixed_time",
+      "duration_seconds": 120,
+      "mean_accumulated_delay": 1697.4,
+      "mean_fairness_index": 0.9153,
+      "mean_final_queue_length": 19.4,
+      "mean_maximum_queue_length": 26.2,
+      "mean_mean_queue_length": 14.144,
+      "mean_throughput_per_minute": 56.3,
+      "profile": "east_west_heavy",
+      "runs": 5,
+      "stdev_accumulated_delay": 153.8865,
+      "stdev_fairness_index": 0.0189,
+      "stdev_final_queue_length": 4.1761,
+      "stdev_maximum_queue_length": 1.4697,
+      "stdev_mean_queue_length": 1.2823,
+      "stdev_throughput_per_minute": 2.502
+    },
+    {
+      "controller": "queue_aware",
+      "duration_seconds": 120,
+      "mean_accumulated_delay": 1599.4,
+      "mean_fairness_index": 0.9699,
+      "mean_final_queue_length": 16.2,
+      "mean_maximum_queue_length": 24.6,
+      "mean_mean_queue_length": 13.328,
+      "mean_throughput_per_minute": 57.9,
+      "profile": "east_west_heavy",
+      "runs": 5,
+      "stdev_accumulated_delay": 121.2825,
+      "stdev_fairness_index": 0.0033,
+      "stdev_final_queue_length": 3.544,
+      "stdev_maximum_queue_length": 2.245,
+      "stdev_mean_queue_length": 1.0076,
+      "stdev_throughput_per_minute": 2.9563
+    },
+    {
+      "controller": "fixed_time",
+      "duration_seconds": 600,
+      "mean_accumulated_delay": 13104.6,
+      "mean_fairness_index": 0.9393,
+      "mean_final_queue_length": 21.6,
+      "mean_maximum_queue_length": 41.2,
+      "mean_mean_queue_length": 21.84,
+      "mean_throughput_per_minute": 64.56,
+      "profile": "east_west_heavy",
+      "runs": 5,
+      "stdev_accumulated_delay": 3087.5629,
+      "stdev_fairness_index": 0.0162,
+      "stdev_final_queue_length": 14.4582,
+      "stdev_maximum_queue_length": 9.5373,
+      "stdev_mean_queue_length": 5.1477,
+      "stdev_throughput_per_minute": 1.706
+    },
+    {
+      "controller": "queue_aware",
+      "duration_seconds": 600,
+      "mean_accumulated_delay": 13086.2,
+      "mean_fairness_index": 0.9394,
+      "mean_final_queue_length": 24.2,
+      "mean_maximum_queue_length": 42.0,
+      "mean_mean_queue_length": 21.81,
+      "mean_throughput_per_minute": 64.3,
+      "profile": "east_west_heavy",
+      "runs": 5,
+      "stdev_accumulated_delay": 2905.5449,
+      "stdev_fairness_index": 0.0139,
+      "stdev_final_queue_length": 14.7973,
+      "stdev_maximum_queue_length": 9.654,
+      "stdev_mean_queue_length": 4.8427,
+      "stdev_throughput_per_minute": 1.6864
+    },
+    {
+      "controller": "fixed_time",
+      "duration_seconds": 120,
+      "mean_accumulated_delay": 1765.2,
+      "mean_fairness_index": 0.9747,
+      "mean_final_queue_length": 16.0,
+      "mean_maximum_queue_length": 27.8,
+      "mean_mean_queue_length": 14.712,
+      "mean_throughput_per_minute": 58.9,
+      "profile": "north_south_heavy",
+      "runs": 5,
+      "stdev_accumulated_delay": 391.1641,
+      "stdev_fairness_index": 0.013,
+      "stdev_final_queue_length": 6.6633,
+      "stdev_maximum_queue_length": 4.7074,
+      "stdev_mean_queue_length": 3.2604,
+      "stdev_throughput_per_minute": 3.2772
+    },
+    {
+      "controller": "queue_aware",
+      "duration_seconds": 120,
+      "mean_accumulated_delay": 1741.8,
+      "mean_fairness_index": 0.9765,
+      "mean_final_queue_length": 16.0,
+      "mean_maximum_queue_length": 27.8,
+      "mean_mean_queue_length": 14.516,
+      "mean_throughput_per_minute": 58.9,
+      "profile": "north_south_heavy",
+      "runs": 5,
+      "stdev_accumulated_delay": 388.8241,
+      "stdev_fairness_index": 0.0139,
+      "stdev_final_queue_length": 6.6633,
+      "stdev_maximum_queue_length": 4.7074,
+      "stdev_mean_queue_length": 3.2407,
+      "stdev_throughput_per_minute": 3.2772
+    },
+    {
+      "controller": "fixed_time",
+      "duration_seconds": 600,
+      "mean_accumulated_delay": 13659.2,
+      "mean_fairness_index": 0.93,
+      "mean_final_queue_length": 27.2,
+      "mean_maximum_queue_length": 40.6,
+      "mean_mean_queue_length": 22.764,
+      "mean_throughput_per_minute": 63.08,
+      "profile": "north_south_heavy",
+      "runs": 5,
+      "stdev_accumulated_delay": 2884.6582,
+      "stdev_fairness_index": 0.0179,
+      "stdev_final_queue_length": 4.7074,
+      "stdev_maximum_queue_length": 5.1614,
+      "stdev_mean_queue_length": 4.8079,
+      "stdev_throughput_per_minute": 1.5394
+    },
+    {
+      "controller": "queue_aware",
+      "duration_seconds": 600,
+      "mean_accumulated_delay": 13380.4,
+      "mean_fairness_index": 0.9281,
+      "mean_final_queue_length": 26.8,
+      "mean_maximum_queue_length": 40.0,
+      "mean_mean_queue_length": 22.3,
+      "mean_throughput_per_minute": 63.12,
+      "profile": "north_south_heavy",
+      "runs": 5,
+      "stdev_accumulated_delay": 2775.5861,
+      "stdev_fairness_index": 0.0174,
+      "stdev_final_queue_length": 4.5343,
+      "stdev_maximum_queue_length": 5.02,
+      "stdev_mean_queue_length": 4.6261,
+      "stdev_throughput_per_minute": 1.593
+    },
+    {
+      "controller": "fixed_time",
+      "duration_seconds": 120,
+      "mean_accumulated_delay": 3798.0,
+      "mean_fairness_index": 0.9931,
+      "mean_final_queue_length": 45.6,
+      "mean_maximum_queue_length": 49.8,
+      "mean_mean_queue_length": 31.65,
+      "mean_throughput_per_minute": 88.1,
+      "profile": "stress",
+      "runs": 5,
+      "stdev_accumulated_delay": 291.0842,
+      "stdev_fairness_index": 0.0026,
+      "stdev_final_queue_length": 10.632,
+      "stdev_maximum_queue_length": 7.494,
+      "stdev_mean_queue_length": 2.4252,
+      "stdev_throughput_per_minute": 2.245
+    },
+    {
+      "controller": "queue_aware",
+      "duration_seconds": 120,
+      "mean_accumulated_delay": 3874.0,
+      "mean_fairness_index": 0.996,
+      "mean_final_queue_length": 47.2,
+      "mean_maximum_queue_length": 51.6,
+      "mean_mean_queue_length": 32.284,
+      "mean_throughput_per_minute": 87.3,
+      "profile": "stress",
+      "runs": 5,
+      "stdev_accumulated_delay": 328.1213,
+      "stdev_fairness_index": 0.0012,
+      "stdev_final_queue_length": 11.99,
+      "stdev_maximum_queue_length": 8.1878,
+      "stdev_mean_queue_length": 2.7329,
+      "stdev_throughput_per_minute": 1.9391
+    },
+    {
+      "controller": "fixed_time",
+      "duration_seconds": 600,
+      "mean_accumulated_delay": 47639.8,
+      "mean_fairness_index": 0.9997,
+      "mean_final_queue_length": 132.2,
+      "mean_maximum_queue_length": 135.6,
+      "mean_mean_queue_length": 79.402,
+      "mean_throughput_per_minute": 96.32,
+      "profile": "stress",
+      "runs": 5,
+      "stdev_accumulated_delay": 9607.9024,
+      "stdev_fairness_index": 0.0001,
+      "stdev_final_queue_length": 25.2935,
+      "stdev_maximum_queue_length": 24.5406,
+      "stdev_mean_queue_length": 16.015,
+      "stdev_throughput_per_minute": 0.6615
+    },
+    {
+      "controller": "queue_aware",
+      "duration_seconds": 600,
+      "mean_accumulated_delay": 48449.8,
+      "mean_fairness_index": 0.9998,
+      "mean_final_queue_length": 130.0,
+      "mean_maximum_queue_length": 135.4,
+      "mean_mean_queue_length": 80.752,
+      "mean_throughput_per_minute": 96.54,
+      "profile": "stress",
+      "runs": 5,
+      "stdev_accumulated_delay": 9678.0784,
+      "stdev_fairness_index": 0.0002,
+      "stdev_final_queue_length": 25.9615,
+      "stdev_maximum_queue_length": 25.3109,
+      "stdev_mean_queue_length": 16.1318,
+      "stdev_throughput_per_minute": 0.5161
+    }
+  ]
+}

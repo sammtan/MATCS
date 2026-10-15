@@ -1,0 +1,28 @@
+digraph ActivityDiagram {
+  graph [rankdir=TB, bgcolor="white", pad="0.2", nodesep="0.45", ranksep="0.55", label="MATCS Simulation Activity", labelloc=t, fontsize=20];
+  node [fontname="Helvetica", fontsize=10];
+  edge [fontname="Helvetica", fontsize=9];
+  start [shape=circle, label="", width=0.2, style=filled, fillcolor=black];
+  configure [shape=box, style="rounded", label="Load seed, timing, demand profile, controller"];
+  init [shape=box, style="rounded", label="Initialize simulation state and metrics"];
+  arrivals [shape=box, style="rounded", label="Generate seeded arrivals"];
+  propose [shape=box, style="rounded", label="Controller proposes abstract phase"];
+  validate [shape=diamond, label="Safety validation accepted?"];
+  apply [shape=box, style="rounded", label="Apply phase to simulated actuator"];
+  fallback [shape=box, style="rounded", label="Keep safe phase and record intervention"];
+  move [shape=box, style="rounded", label="Move vehicles and update waiting"];
+  measure [shape=box, style="rounded", label="Accumulate delay and observe metrics"];
+  more [shape=diamond, label="Duration reached?"];
+  report [shape=box, style="rounded", label="Finalize CSV/JSON-ready metrics"];
+  end [shape=doublecircle, label=""];
+  start -> configure -> init -> more;
+  more -> report [label="yes"];
+  more -> arrivals [label="no"];
+  arrivals -> propose -> validate;
+  validate -> apply [label="yes"];
+  validate -> fallback [label="no"];
+  apply -> move;
+  fallback -> move;
+  move -> measure -> more;
+  report -> end;
+}
