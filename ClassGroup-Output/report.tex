@@ -135,8 +135,8 @@ Fase 4: Future research & Statistical evaluation, calibrated digital twin, lalu 
 \subsection{Jadwal dan Definition of Done}
 Pekerjaan dinyatakan selesai apabila implementasi berjalan, test atau evidence tersedia, anggota lain dapat meninjau hasilnya, dokumentasi diperbarui, dan risiko tindak lanjut dicatat. Fase berikutnya tidak boleh menghapus fixed-time baseline atau safety validator.
 
-\subsection{UML 1: Use-Case Diagram}
 \newpage
+\subsection{UML 1: Use-Case Diagram}
 Aktor utama adalah student developer dan lecturer/reviewer. Authority/site stakeholder hanya berinteraksi pada batas future observation approval, bukan sebagai asumsi hak aktuasi.
 \begin{figure}[htbp]
 \centering
@@ -145,8 +145,8 @@ Aktor utama adalah student developer dan lecturer/reviewer. Authority/site stake
 \label{fig:use-case}
 \end{figure}
 
-\subsection{UML 2: Class Diagram}
 \newpage
+\subsection{UML 2: Class Diagram}
 Kelas utama adalah ScenarioConfig, DemandProfile, TimingPlan, SimulationState, SignalState, FixedTimeController, QueueAwareController, SafetyValidator, SimulatedActuator, TrafficSimulator, MetricsCollector, dan RunMetrics.
 \begin{figure}[htbp]
 \centering
@@ -155,8 +155,8 @@ Kelas utama adalah ScenarioConfig, DemandProfile, TimingPlan, SimulationState, S
 \label{fig:class}
 \end{figure}
 
-\subsection{UML 3: Sequence Diagram}
 \newpage
+\subsection{UML 3: Sequence Diagram}
 Urutan satu tick adalah generate arrivals; controller propose; validator validate; actuator apply jika accepted; move vehicles; update waiting/delay; metrics observe; dan advance simulation time.
 \begin{figure}[htbp]
 \centering
@@ -165,8 +165,8 @@ Urutan satu tick adalah generate arrivals; controller propose; validator validat
 \label{fig:sequence}
 \end{figure}
 
-\subsection{UML 4: Activity Diagram}
 \newpage
+\subsection{UML 4: Activity Diagram}
 Aktivitas dimulai dengan konfigurasi seed, durasi, demand profile, dan controller. Sistem melakukan loop tick sampai durasi selesai. Jalur accepted menuju simulated actuator, sedangkan jalur rejected mempertahankan fase aman dan mencatat intervention.
 \begin{figure}[htbp]
 \centering
@@ -175,8 +175,8 @@ Aktivitas dimulai dengan konfigurasi seed, durasi, demand profile, dan controlle
 \label{fig:activity}
 \end{figure}
 
-\subsection{UML 5: State-Machine Diagram}
 \newpage
+\subsection{UML 5: State-Machine Diagram}
 Urutan fase adalah North/South Green, North/South Yellow, All-Red to East/West, East/West Green, East/West Yellow, dan All-Red to North/South. Controller tidak dapat melompati yellow atau all-red.
 \begin{figure}[htbp]
 \centering
