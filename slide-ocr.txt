@@ -1,0 +1,455 @@
+Files: 26
+
+===== 1: Screenshot 2026-09-28 120856.png =====
+se DEPARTEMEN
+wears | TEKNIK ELEKTRO Management Risk identification
+Software structure & retirement
+Engineering - hierarchical, peer.,...
+Roadmap:
+Chapter 2 Focus SPMP
+Development
+practices - when to do what phase
+- document: SPMP Cost estimate
+Analyze / Development ~ 7 Maintain
+. / phases —
+requirements, - |
+R / \ Integrate
+Design i \ & test system
+Implement Test units
+
+
+===== 2: Screenshot 2026-09-28 120901.png =====
+e Understand the term “project management”
+e Organize teams
+
+e Specify project management plans
+
+e Define and retire risks
+
+e Estimate costs very early in the life cycle
+
+e Create high level projects schedules
+
+e Write a Software Project Management Plan
+
+
+===== 3: Screenshot 2026-09-28 120918.png =====
+Can somewhat vary the following factors.
+1. The total cost of the project,
+e e.g., increase expenditures
+2. The capabilities of the product, The Variables of
+e e.g., subtract from a list of features Projec t Managemen t
+3. The quality of the product,
+e e.g., increase the mean time between failure
+4. The date on which the job is completed.
+e e.g., reduce the schedule by 20%
+e e.g., postpone project's completion date one month
+
+
+===== 4: Screenshot 2026-09-28 120933.png =====
+LeKrRo Bullseye Figure for Project Variables
+100% wee $70K
+Actual: 5 _ meee Actual:
+100% 5 $90K
+
+eer roject ys
+capability Ls.
+TY *.. Target :
+Target : X mo
+4 defects/Kloc : { GA \ 30 wks
+Actual: beac me Actual:
+1 defect/Kloc © 20 wks
+
+
+===== 5: Screenshot 2026-09-28 121024.png =====
+EMEN e
+eLEKTRO RoadMap for Project Manageme
+1. Understand project content, scope, & time frame
+2. Identify development process
+(methods, tools, languages, documentation and support) -- section 4 of chapter 1
+3. Determine organizational structure
+(organizational elements involved) -- see section 3
+4. Identify managerial process
+(responsibilities of the participants) -- see section 3 of case study 1 at end of chapter
+5. Develop schedule
+(times at which the work portions are to be performed) -- see section 6
+6. Develop staffing plan -- see section 3.5 of case study 1
+7. Begin risk management -- see section 4
+8. Identify documents to be produced - see soap 4.2
+| 9. Begin process itself -- described in chapters 3-10 |
+
+
+===== 6: Screenshot 2026-09-28 121042.png =====
+TEKNIK ELEKTRO P an ano Execute Meetings
+. Distribu art time, end time, and agenda wi imes
+see figure thd)
+| list important items first
+2.* Ensure “strawman” items prepared
+B. Start on time Oye ny
+A. Have someone record action items? Way =
+iq Have someone track time & prompt members
+p. Get agreement on the agenda and timing
+7. Watch timing throughout, and end on time
+allow exceptions for important discussion
+stop excessive discussion; take off line
+8. Keep discussion on the subject
+9.** E-mail action items & decision summary.
+
+
+===== 7: Screenshot 2026-09-28 121051.png =====
+DEPARTEMEN
+TEKNIK ELEKTRO
+i. Get agreement on agenda & time allocation
+2. Get volunteers to ... :
+... record decisions taken and action items
+... Watch time and prompt members (see figure tbd)
+B. Report progress on project schedule -- 10 mins
+A. Discuss strawman artifact(s) -- X MINS
+5. Discuss risk retirement -- 10 mins
+<MORE ITEMS>
+metrics and process improvement?
+n. Review action items -- 5 mins
+
+
+===== 8: Screenshot 2026-09-28 121102.png =====
+TRO Optimal Size for Interaction (Approximate)
+I
+Effectiveness Approximate Developer
+per developer . communicates
+| optimal range — regularly with eleven
+| people.
+| Communication time
+| outweighs benefits of
+| | interaction
+Developer communicates '
+OD regularly with no one. |
+Oo communication time |
+lost, but developer is too | CO) ©)
+isolated and has no help. | ()
+> ©
+3 7 C) O
+oaiw
+Number of people with whom C) C)C)
+developer must frequently interact
+Key: ( ) =engineer
+
+
+===== 9: Screenshot 2026-09-28 121109.png =====
+NPE SHAS Hierarchical Project Management Organizations
+Manager
+Marketing Development QA
+Software engineer Software engineer Software engineer | | Technical specialist
+L | »
+Smaller Projects: Larger Projects:
+No separate Marketing? Subdivide QA into testing, ...?
+No separate QA organization? Subdivide Engineering into
+system engineering, ...?
+
+
+===== 10: Screenshot 2026-09-28 121121.png =====
+CELEKTRO Horizontal Project Management Organizatic
+Ian Corliss
+Team member
+Gil Warner
+Team leader Nel Tremont
+Team member
+Team facilitator?
+Fran Smith
+Team member
+
+
+===== 11: Screenshot 2026-09-28 121133.png =====
+ELEKTRO Organize a Team
+1. Select team leader: responsibilities:
+ensure all project aspects active
+fill all gaps
+3. Designate leader roles & document responsibilities
+team leader: proposes and maintains... SPMP
+configuration management leader: ... SCMP
+quality assurance leader: ... SQAP, STP
+requirements management leader: ... SRS
+design leader: ... SDD
+implementation leader: ... Code base
+2. JL@aders’ responsibilities:
+propose a strawman artifact (e.g. SRS, design)
+seek team enhancement & acceptance
+ensure designated artifact maintained & observed
+maintain corresponding metrics if applicable
+4. Designate a backup for each leader
+Dye WAYS ws
+—>
+
+
+===== 12: Screenshot 2026-09-28 121140.png =====
+eo __ Peer Organizations for Larger Project;
+(
+JEG
+Bf, EX fef
+CS OO) RS
+WIPRO Lops
+ote Pol 7 ome
+Team of leaders
+(>) ( 0)
+ASS ae,
+EY URI ES
+SEZEBO
+Ex
+
+
+===== 13: Screenshot 2026-09-28 121147.png =====
+Matrixed organization
+Project |
+Table 2.1
+Matr ixed Airline Bank Molecular Fluid
+organization reserv. accountg. analysis mechanics
+project project project project
+Project
+manage-
+ment dpt
+Func- ate
+tional P
+Unit
+Engineer-
+ing dpt
+
+
+===== 14: Screenshot 2026-09-28 121155.png =====
+1. Identification
+
+Mindset: try to continually identify risks
+2. Retirement planning
+
+3. Prioritization ®
+4. Retirement or mitigation
+
+
+===== 15: Screenshot 2026-09-28 121202.png =====
+1. Lack of top management commitment
+
+2. Failure to gain user commitment
+
+3. Misunderstanding of requirements
+
+4. \Inadequate user involvement
+
+5. Failure to manage end-user expectations
+6. Changing scope and/or objectives
+
+
+===== 16: Screenshot 2026-09-28 121208.png =====
+Pore The Risk Management Mindset
+Identification Retirement
+. 2. “Java . 2. Retirement
+Project f skills not Project f by avoidance:
+finish high finish Use C++
+enough.”
+ir a ir a
+8 1. Retirement
+by conquest:
+a *. Demonstrate
+1. May not be ° image super-
+possible to ° imposition
+images pose Project Project
+adequately.” start start
+
+
+===== 17: Screenshot 2026-09-28 121213.png =====
+RO A way to computer risk priorities
+Likelihood Impact Retire-ment Priority Resulting
+1-10 1-10 cost computation priority
+Table 2.2 A
+way to ey
+. 1 = least likely 1 =least 1 = lowest Lowest
+compute . .
+risk impact retirement cost number
+priorities handled first
+; 10 = (11-10)
+T we highest 10 (most (lowest *(11-J0) 1
+Priority risk (most likely) impact) retirement *]
+pact) cost) 7
+] 10 (11-1)
+LnI2 LEIS 1 (least (highest *(11-/) 1000
+Priority risk (least likely) impact) retirement *10
+pact) cost) _
+
+
+===== 18: Screenshot 2026-09-28 121220.png =====
+# Risk title Like- Im- Retire- Pri- Retirement / mitigation Respon- Target |
+(details given lihood pact ment ority plan sible com-
+above) 1-10 1-10 cost engineer pletion
+1-10 bake date
+1-teast likely 1=least 1=lowest handled
+impact retirement first
+| 7 |
+Super- . :
+1 imposing 3 10 1 8 Experiment with PR. 2/1/99
+images Java images.
+H.T., K-M., V.I. and
+L.D. to attend
+2 training course
+beginning 1/5/99 at
+Deficient Ultra Training Corp,
+Java skills ’ 6 8 80 obtain Java level 2 H. L. 4/15/99
+certification by
+3/1/99 and level 3
+certification by
+4/15/99
+nian ray Susan Ferris to Contin
+3 . 3 7 9 288 inspect all of Alan's S.F. 7
+pulled off ual
+; . work
+this project
+
+
+===== 19: Screenshot 2026-09-28 121233.png =====
+nLEKTRO Identify and Retire Risks
+
+1.* Each team member spends 10 mins. exploring his or her
+
+greatest fears for the project’s success
+
+2.* Each member specifies these risks in concrete language,
+
+eights them, writes retirement plans, (see format above)
+
+& e-mails to the team leader
+
+3 Team leader integrates and prioritizes results
+
+/ ™ Group spends 10 mins. seeking additional risks
+
+5.“ Team spends 10 mins. finalizing the risk table
+
+| Designates responsible risk retirement engineers
+
+6.** Responsible engineers do risk retirement work
+
+. Team reviews risks for 10 mins. at weekly meetings
+
+responsible engineers report progress
+team discusses newly perceived risks and adds them
+
+
+===== 20: Screenshot 2026-09-28 121239.png =====
+LEKTRO Potential CASE Tool Components
+To support project For drawing designs
+management functional
+
+schedule object-oriented
+
+work Ty use-case-based
+
+breakdown Tracing tools
+To support requirements to
+configuration designs
+
+designs to code
+management
+; To support testing
+For managing
+To support
+requirements
+maintenance
+
+
+===== 21: Screenshot 2026-09-28 121246.png =====
+nKcTRO Example of Build vs. Buy Decision-making: Game Graphics engine
+Build cost’ |Buycost | Comments
+(in thousands) multi-year costs not accounted for
+
+Supplies $ 0 | $40 Purchase Ajax engine
+First-person perspective $5)/3$0 Ajax has this feature
+3-D $10 | $ 1 Customize Ajax application
+Light reflection $15 | $10 Customize Ajax application
+
+oS
+TOTALS ' ($30 |) $51
+
+NLA
+
+Build, do not buy
+
+
+===== 22: Screenshot 2026-09-28 121253.png =====
+xo 0 Lable 2.4 Example of method for deciding language choice
+Weight Benefit of Benefit of
+(1-10) Language 1 Language 2
+1 to 10=best 1 to 10=best
+ee
+PT
+Familiarity to
+development team 3
+PT
+Runtime speed on 1 7 3
+processor p
+eee
+Score 3*8 + 8*3 + 3*2 + 8*9 +
+5*2 + 1*7 5*8 + 1*3
+= 65 = 121
+
+
+===== 23: Screenshot 2026-09-28 121301.png =====
+MEN High Level Task Chart with Fixed Delivery Date:
+renee Order of Completion
+j1}2)3/4/1)2)3/4/1)2/3/4/1]2/3/4/1)2/3/4)
+SCMPcomplete4 —___ Begin system testing A (2) |
+Milestones A SQAP complete (1*) Delivery A
+ASPMPrel.lcomplete = —
+(3) Freeze requirements A 7 |
+Iteration 2 oe _
+identification & (5) Prep. for maintenance a
+* Indicated the order in which the parts of this table were built
+
+
+===== 24: Screenshot 2026-09-28 121309.png =====
+LEKTRO Create an Initial Schedule
+
+1. Indicate the milestones your must observe
+usually includes delivery date
+
+2. Back these up to introduce the milestones you need
+
+| e.g., begin system testing well before delivery
+
+3. Designate a time at which all requirements frozen
+
+The remaining steps depend on the process used. We
+will assume an iterative process.
+
+A. Show first iteration: establishes minimal capability
+usually: keep it very modest, even trivial, in capability
+benefit: exercises the development process itself
+
+5. Show task of identifying & retiring risks
+
+| starting from project inception
+
+6. Show unassigned time (e.g., week) near middle?
+
+. Complete the schedule
+
+
+===== 25: Screenshot 2026-09-28 121406.png =====
+TaEe Level Labor Allocation for Fixed Labor Tota
+1/2 /3)4)1/2/3/4/1/2 3)4)1/2/3/4/1/2/3)4)
+Milestones Freeze requirements A Complete testing A
+: : : : [Karen : : : : Release to production : A
+Cn ee a
+, ELIE LILICILILICiE
+Risk ID & retire 4 Tobe assigned
+Given team size:
+
+
+===== 26: Screenshot 2026-09-28 121412.png =====
+i DEPARTEMEN -
+| TEKNIK ELEKTRO Legacy System Integration
+Add new features (typically using Build new application
+same language) or Change features sume appease
+(e.g., port to new environment) that uses legacy system
+(possibly using
+different language)
+Legacy Legacy New
+system system application
+New
+features
+

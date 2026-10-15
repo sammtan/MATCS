@@ -1,0 +1,15 @@
+.env
+.trello-venv/
+.ocr-venv/
+.vs/
+__pycache__/
+*.py[cod]
+
+# LaTeX build intermediates; keep the generated PDF artifacts.
+ClassGroup-Output/*.aux
+ClassGroup-Output/*.lof
+ClassGroup-Output/*.log
+ClassGroup-Output/*.lot
+ClassGroup-Output/*.out
+ClassGroup-Output/*.toc
+ClassGroup-Output/*.synctex.gz

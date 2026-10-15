@@ -1,0 +1,1018 @@
+MULTI-AGENT TRAFFIC CONTROL SYSTEM
+
+Group 14
+1. Samuel Tanaka S 2206059710
+2. Alfonsus Tanara G 2306267126
+3. Ade Zaskia Azzahra 2406344353
+
+COMPUTER ENGINEERING STUDY PROGRAM
+
+FACULTY OF ENGINEERING
+
+UNIVERSITAS INDONESIA
+
+2026
+
+--- PAGE Team Report (current_ Chapter 3 (Project Design))_page-0001.jpg ---
+
+TABLE OF CONTENTS
+
+--- PAGE Team Report (current_ Chapter 3 (Project Design))_page-0002.jpg ---
+
+CHAPTER 1
+INTRODUCTION
+
+1.1 Background
+
+Traffic congestion is a common problem in urban areas. The number of vehicles using a road
+can change according to the time of day, commuting patterns, weather, public activities,
+incidents, and other conditions. Because traffic demand changes over time, a
+traffic-management system that uses only a fixed pattern may not always use available road
+
+capacity effectively.
+
+Traffic lights are important for organizing vehicle movement through road intersections. They
+assign the right of way to different approaches and help prevent conflicting movements.
+However, if every approach receives the same timing even when its traffic demand is
+different, one approach may develop a long queue while another approach has unused
+
+green-light time. This can increase waiting time, vehicle stops, and overall delay.
+
+The problem becomes more difficult when several intersections are connected by the same
+toad corridor. Vehicles released from one intersection may travel toward another intersection
+and create a queue there. Therefore, a decision that reduces congestion at one intersection
+may transfer congestion to a neighboring intersection if the wider traffic condition is not
+considered. A traffic-control approach for connected intersections should consider local
+conditions and, when the system is expanded, relevant information from neighboring
+
+intersections.
+
+Artificial intelligence can support traffic-management research by helping a system analyze
+changing traffic conditions and select actions according to a defined objective. Agentic AI is
+televant to this problem because the system can be organized into software components with
+specific responsibilities. For example, one component can process observations, another can
+maintain the current state, and a controller can propose a signal action. In a multi-intersection
+expansion, local controller agents may coordinate through summarized information from
+
+connected intersections.
+
+--- PAGE Team Report (current_ Chapter 3 (Project Design))_page-0003.jpg ---
+
+Based on this problem, Group 14 proposes the Multi-Agent Traffic Control System
+(MATCS). MATCS is a software-only, simulation-first project that models traffic demand,
+vehicle movement, traffic-light phases, and controller decisions in a defined area. The system
+teceives or synthesizes traffic observations, creates a representation of the current simulation
+state, proposes a traffic-light action, validates that action using deterministic safety rules, and
+
+applies the validated action to the simulator.
+
+The first implementation target is one simulated area containing one intersection. This scope
+is intentionally limited so that the team can demonstrate the complete feedback loop before
+introducing the additional complexity of multiple connected intersections. The first controller
+is a fixed-time baseline. Later work may compare it with a queue-aware controller and, if the
+
+tesults and project schedule justify it, an optimization or leamed controller.
+
+MATCS does not connect to or control public traffic-light hardware. The system imitates the
+interfaces and feedback flow of a possible real-world system while keeping actuation inside
+the simulator. This boundary is necessary because public traffic control is safety-critical,
+
+legally controlled, and outside the scope of this student project.
+
+The main objective of the project is to investigate whether a data-driven traffic-light
+controller can improve traffic-flow measures such as travel time, delay, queue length,
+throughput, and the number of stops in repeatable simulation scenarios. Reducing estimated
+emissions or fuel consumption may be considered a secondary objective when the selected
+simulator provides a credible measurement proxy. Any improvement must still respect
+
+signal-safety constraints and must not unfairly starve one approach.
+
+The project supports a live public-facing demonstration of the simulation near the end of the
+course. The demonstration shows simulated traffic and controller behavior, not real-world
+traffic-light control. This report presents the project background, requirements,
+
+project-management process, risk management, and initial technical direction.
+
+--- PAGE Team Report (current_ Chapter 3 (Project Design))_page-0004.jpg ---
+
+1.2 Problem Statement
+
+Urban traffic demand changes over time, but fixed traffic-light schedules may not respond to
+those changes. This can create unnecessary delay and queues. Connected intersections
+introduce an additional coordination problem because releasing traffic from one intersection
+
+can affect downstream conditions.
+
+MATCS addresses this problem as a simulation and software-engineering study: how can a
+traffic-control system represent changing traffic conditions, propose safe signal actions, and
+
+evaluate local and coordinated control strategies using reproducible experiments?
+
+1.3 Project Objectives
+1.3.1 Primary Objective
+
+The primary objective is to design and evaluate a simulation-based traffic-control system that
+aims to improve traffic flow by reducing delay, travel time, queue length, and unnecessary
+
+stops while maintaining safe signal transitions.
+1.3.2 Secondary Objective
+
+The secondary objective is to investigate whether improved traffic flow can also reduce an
+emissions or fuel-consumption proxy when the selected simulator supports such a
+
+measurement.
+1.3.3 Engineering Objectives
+The engineering objectives are:
+
+e Define a reproducible one-intersection simulation scenario.
+
+e Implement or configure a fixed-time controller baseline.
+
+e Define observation, state, proposal, validation, actuation, and metric contracts.
+
+e Compare later controllers against the fixed-time baseline using matched scenarios.
+
+e Keep the system simulation-only and suitable for a live public demonstration.
+
+e Manage the project using a traceable and lightweight process appropriate for a
+
+three-student team.
+
+--- PAGE Team Report (current_ Chapter 3 (Project Design))_page-0005.jpg ---
+
+1.4 Scope and Limitations
+1.4.1 Initial Scope
+The initial scope consists of:
+
+e@ One simulated area.
+
+e@ One intersection.
+
+e Simulated vehicles or traffic demand.
+
+e Simulated traffic-light phases and timing.
+
+e A local central process.
+
+e Deterministic safety validation.
+
+e A fixed-time controller as the first baseline.
+
+e@ Metrics and a future live dashboard or demonstration path.
+1.4.2 Future Scope
+Future development may include:
+
+e Multiple connected intersections.
+
+e Coordination between local intersection controllers.
+e@ Queue-aware or optimization-based control.
+
+e Offline-trained learning policies.
+
+e Optional external traffic context for scenario calibration.
+1.4.3 Limitations
+The project has the following limitations:
+
+e The system does not control real traffic lights.
+
+e No extemal real-time traffic-data source is required or assumed.
+
+e Results depend on the selected simulator and scenario assumptions.
+
+e The project does not claim that AI improves traffic until experiments provide
+evidence.
+
+e The project budget is effectively zero, so laptop-first execution and free-tier services
+
+are preferred.
+
+--- PAGE Team Report (current_ Chapter 3 (Project Design))_page-0006.jpg ---
+
+PROJECT MANAGEMENT
+
+CHAPTER 2
+
+2.1 Project Management Approach
+
+MATCS uses a lightweight iterative project-management process. The team plans a small
+amount of work, executes it, reviews evidence, retires risks, and updates the report and
+
+project board. This approach applies the lecturerΓÇÖs project-management principles while
+
+avoiding unnecessary corporate
+
+Trello is the projectΓÇÖs project-management source of truth. GitHub is the source of truth for
+
+complexity.
+
+source code, branches, pull requests, documentation history, and implementation artifacts.
+
+The project-management proces:
+
+S COVeTS:
+
+e Project scope and objectives
+
+e Team organization and responsibilities
+
+e Schedule and milestones
+
+e Risk identification and retirement
+
+e Document production
+e Meetings and decisions
+
+e Technology selection
+
+e Evidence and completion criteria
+
+2.2 Team Organization and Responsibilities
+
+The project team consists of three students. Each responsibility area has a primary owner and
+
+a backup owner so that progress does not depend on only one person.
+
+Team member Student ID Primary responsibility
+
+Samuel Tanaka S 2206059710 Project coordination, report
+integration, and Trello
+administration
+
+Alfonsus Tanara G 2306267126 Simulation and controller
+
+research
+
+
+--- PAGE Team Report (current_ Chapter 3 (Project Design))_page-0007.jpg ---
+
+Ade Zaskia Azzahra 2406344353 Platform/data/dashboard
+planning and quality
+tracking
+
+2.2.1 Samuel - Project Coordinator, Report Integration, and Trello Administrator
+Samuel is responsible for:
+
+e Maintaining the Trello board structure, labels, dates, and member permissions.
+e Converting project requirements into cards and acceptance criteria.
+
+e Maintaining the team report and coordinating report integration.
+
+e Facilitating regular meetings and recording decisions and action items.
+
+e Maintaining the milestone schedule and coordinating risk-register reviews.
+
+e Confirming that completed cards contain sufficient evidence before they are marked
+
+as done.
+2.2.1 Alfonsus - Simulation and Controller Research
+Alfonsus is responsible for:
+
+e Comparing simulator candidates using the defined selection criteria.
+e Defining the first one-intersection scenario with traffic demand and signal phases.
+
+e Specifying the fixed-time controller baseline.
+
+e Identifying traffic-flow metrics and a possible emissions or fuel-consumption proxy.
+
+e Recording simulation decisions, assumptions, and research evidence.
+2.2.3 Ade - Platform, Data, Dashboard, and Quality Tracking
+Ade is responsible for:
+
+e Defining observation, state, proposal, validation, actuation, and metrics contracts.
+e Planning MongoDB collections and data-retention boundaries.
+
+e Planning the dashboard and eventual Vercel live-demo boundary.
+
+e Maintaining the quality checklist and identifying test and evidence requirements.
+
+e Reviewing completed technical cards for traceability and documentation impact.
+
+All team members are responsible for reviewing one anotherΓÇÖs work, reporting risks early,
+
+and updating their assigned Trello cards.
+
+--- PAGE Team Report (current_ Chapter 3 (Project Design))_page-0008.jpg ---
+
+2.3 Project Milestones
+
+Exact dates follow the course schedule and are maintained in the Trello board.
+
+Milestone Objective Required evidence Status
+Mo ΓÇö Finalize scope, Trello board, report | Completed
+Project-management | board, risks, section, risk register
+foundation documents, and
+
+ownership
+M1 ΓÇö Simulator Compare candidates | Decision record and | Planned
+decision and select a comparison table
+
+manageable
+
+simulator or custom
+
+approach
+M2 ΓÇö Reproducible | Run one Scenario Planned
+baseline deterministic configuration,
+
+one-intersection fixed-time result,
+
+scenario and metrics
+M3 ΓÇö Platform Connect state, Working local Planned
+vertical slice controller, demonstration
+
+validation, storage,
+
+and display paths
+M4 ΓÇö Controller Compare fixed-time | Experiment table Planned
+comparison control with a and analysis
+
+justified alternative
+MS ΓÇö Live Present the Live demonstration | Planned
+demonstration simulation publicly | checklist and
+
+evidence
+
+M6 ΓÇö Final report | Consolidate Final report and Planned
+
+tequirements, contribution record
+
+process,
+
+implementation,
+
+results, and
+
+limitations
+
+2.4 Initial Work Breakdown
+
+
+--- PAGE Team Report (current_ Chapter 3 (Project Design))_page-0009.jpg ---
+
+2.4.1 Planning and Management
+
+e Define project scope and non-goals.
+
+e Rework Chapter 1.
+
+e Create and configure the Trello board.
+
+e Invite all team members.
+
+e Assign primary and backup responsibilities.
+e Create the risk register.
+
+e Create the document tracker.
+
+e Define the meeting and decision process.
+2.4.2 Technical Preparation
+
+e Compare simulator candidates.
+
+e Define the one-intersection scenario.
+
+e Define signal phases and safety constraints.
+
+e Define observation and state contracts.
+
+e Define primary traffic metrics and a possible emissions proxy.
+
+e Confirm the local development environment after simulator selection.
+2.4.3 Initial Implementation
+
+e Build or configure the traffic scenario.
+e Implement the fixed-time controller.
+
+e Implement deterministic validation.
+
+e Record replayable state and metric data.
+
+e Display the current simulation state.
+
+2.4.5 Meeting Protocol
+
+The team holds a regular meeting at least once per project week or class milestone. Each
+
+meeting follows this agenda:
+
+e Confirm the agenda and time allocation.
+
+e Review completed evidence and current board progress.
+
+--- PAGE Team Report (current_ Chapter 3 (Project Design))_page-0010.jpg ---
+
+Review the schedule and upcoming milestones.
+
+Review active risks and retirement progress.
+
+Discuss decisions and unresolved questions.
+
+Assign action items with owners and target dates.
+
+Confirm the next meeting and expected evidence.
+
+One member records decisions and action items, while another monitors the meeting time.
+
+The meeting record is attached or linked from the Trello Decisions & Meeting Actions list.
+
+2.4.6 Risk Management
+
+The team continuously identifies, prioritizes, and retires risks. Risk priority is calculated
+
+using:
+
+Priority = Likelihood x Impact x (11 ΓÇö Retirement Cost)
+
+Likelihood, impact, and retirement cost use a scale from 1 to 10. Higher priority risks are
+
+handled first.
+ID Risk Likeliho | Impact Retireme | Mitigatio | Responsi | Status
+od nt cost nor ble
+retireme
+nt plan
+R-01 Simulato | 7 8 4 Time-bo | Alfonsus | Open
+ris too x
+difficult candidat
+or e
+incompat comparis
+ible with on and
+the team select a
+simpler
+fallback
+R-02 Project 8 9 2 Freeze Samuel |} Open
+scope the first
+grows scope at
+beyond one
+the team intersecti
+
+
+--- PAGE Team Report (current_ Chapter 3 (Project Design))_page-0011.jpg ---
+
+and on and
+course defer
+timefram expansio
+e n
+R-03 No Use Alfonsus | Open
+suitable synthetic
+external or
+traffic simulator
+data is -generate
+available d data as
+the
+tequired
+path
+R-04 Live Prepare a | Ade Open
+demonstr controlle
+ation d
+depends public-de
+on one mo path
+unreliabl anda
+e local
+computer recovery
+or path
+service
+R-05 Al Require | Alfonsus | Open
+complexi fixed-tim
+ty eand
+produces heuristic
+no baselines
+measura before
+ble learning
+benefit work
+R-06 Project- Review | Samuel | Open
+manage the
+ment assignine
+requirem nt
+ents are requirem
+misunder ents and
+stood update
+the board
+and
+report
+R-07 High-fre Buffer Ade Open
+quency locally,
+simulatio aggregat
+n data e writes,
+
+
+--- PAGE Team Report (current_ Chapter 3 (Project Design))_page-0012.jpg ---
+
+creates and
+storage tetain
+or cost summari
+problems zed runs
+R-08 Responsi | 6 7 2 Maintain | Samuel | Open
+bility primary
+gaps and
+delay backup
+work owners
+for each
+tesponsi
+bility
+
+Risks are reviewed during regular meetings. New risks are added to the Trello Risks &
+
+Retirement list with a responsible member and a target date.
+
+2.7
+
+2.8 Definition of Ready
+
+A work item is ready when its objective, scope, owner, dependencies, target date, acceptance
+
+or evidence criteria, and documentation impact are clear.
+
+2.9 Definition of Done
+
+A work item is complete when:
+
+The planned work or research has been completed.
+
+Evidence exists, such as a decision, document, test, screenshot, experiment, or pull
+request.
+
+Another team member has reviewed it.
+
+The Trello card has been updated and moved to Done.
+
+Related report or repository documentation has been updated.
+
+--- PAGE Team Report (current_ Chapter 3 (Project Design))_page-0013.jpg ---
+
+e Known risks and follow-up work have been recorded.
+
+2.10 Trello Project Management Board
+The team uses a Trello board named MATCS ΓÇö Project Management.
+The board uses the following lists:
+
+- Project Charter / Scope
+- Backlog / Not Started
+- This Week
+
+- In Progress
+
+- Review / Waiting
+
+- Done
+
+- Risks & Retirement
+
+- Decisions & Meeting Actions
+The board uses labels for:
+
+e Planning
+
+e Simulation
+
+e Data
+
+e Controller
+
+e@ Dashboard
+
+e Documentation
+
+e Risk
+
+Each work card contains an objective, scope, owner, backup, target date, dependencies,
+acceptance or evidence criteria, related document, and related branch or pull request when
+
+applicable.
+The initial project-management cards cover:
+
+e Project scope and non-goals
+e One-intersection first vertical slice
+
+e Project objectives and success metrics
+
+--- PAGE Team Report (current_ Chapter 3 (Project Design))_page-0014.jpg ---
+
+e Simulation-only safety boundary
+e Simulator comparison
+
+e Initial schedule
+
+e Risk register
+
+e Document tracker
+
+e Observation and state contracts
+
+e Fixed-time controller specification
+
+e Meeting process
+
+2.11 Board Setup and Team Membership
+
+The Trello board has been created and configured. All three group members have been
+
+invited and have successfully joined the board.
+The completed membership checklist is:
+
+e Samuel Tanaka S joined
+
+e Alfonsus Tanara G joined
+
+e Ade Zaskia Azzahra joined
+
+e Board visibility reviewed
+
+e Member permissions checked
+e Initial responsibilities assigned
+
+e Initial project-management cards prepared
+
+Trello is used for planning, ownership, schedule, risks, decisions, and project evidence.
+
+GitHub is used for source code, branches, pull requests, and repository documentation.
+
+2.12 Board Operating Rules
+
+e Trello is the single project-management source of truth.
+e GitHub is the software source of truth.
+e Every active card has one primary owner.
+
+e Every major responsibility has a backup.
+
+--- PAGE Team Report (current_ Chapter 3 (Project Design))_page-0015.jpg ---
+
+e Acard cannot be moved to Done without evidence.
+
+e Risks are reviewed in every regular meeting.
+
+e Decisions are recorded instead of remaining only in chat.
+
+e Dates and owners are updated when circumstances change.
+
+e The board remains small enough for three students to understand at a glance.
+
+e The team does not maintain Jira and Trello as competing sources of truth.
+
+2.13 Conclusion
+
+The MATCS project has established a manageable project-management foundation for a
+three-student Software Engineering team. The project begins with a clearly bounded,
+simulation-only one-intersection system and a fixed-time controller baseline. Trello provides
+a lightweight way to manage scope, responsibilities, milestones, risks, documents, meetings,
+
+and evidence.
+
+The next technical stage is to compare simulator candidates, select an appropriate zero-cost or
+locally runnable option, and prepare the reproducible baseline scenario. Later development
+may expand the system to multiple intersections and more advanced controllers after the first
+
+vertical slice has been evaluated.
+
+--- PAGE Team Report (current_ Chapter 3 (Project Design))_page-0016.jpg ---
+
+3.1 UML Design
+
+CHAPTER 3
+
+PROJECT DESIGN
+
+3.1.1 Use Case Diagram
+
+Traffic Officer,
+
+(0ishub / Police)
+
+K
+
+Researcher / Operator
+
+(team member)
+
+MATCS (simulation-only, one intersection)
+
+View Live intersection State
+
+View Controller Decision Log
+
+Configure Scenario
+Provide Traffic Observations
+
+Select Controller
+
+i
+ii
+
+Propose Signal Action
+
+un Simulation
+
+Validate and Apply Action
+
+ΓÇÿCompare Controller Results
+
+Record Run Data
+Replay Recorded Run
+
+i
+
+The Use Case Diagram illustrates the interaction between the main actors and the
+Multi-Agent Traffic Control System (MATCS). The system is designed as a simulation-only
+system for one intersection. There are three main actors involved: Traffic Officer,
+Researcher/Operator, and Traffic Simulator. The Traffic Officer can view the live intersection
+state, traffic metrics, and controller decision logs. The Researcher/Operator can configure the
+simulation scenario, select the controller, run the simulation, compare controller results, and
+teplay recorded runs. Meanwhile, the Traffic Simulator provides traffic observations and
+teceives the proposed traffic signal actions from the system. The diagram also shows that
+
+tunning a simulation includes the processes of providing traffic observations, proposing
+
+a
+ΓÇÿTraffic Simulator
+
+ssystern>
+
+Figure 3.1. Use Case Diagram of MATCS
+
+signal actions, validating and applying the actions, and recording the simulation data.
+
+--- PAGE Team Report (current_ Chapter 3 (Project Design))_page-0017.jpg ---
+
+3.1.2 Class Diagram
+
+| Tact Sg) roca
+
+[pans Raseciotate mT
+
+Satenyvaiator
+
+NN
+
+SignaContrter
+
+[Erpoine rieocorSatey Saatrosor]
+
+Figure 3.2. Class Diagram of MATCS
+
+The Class Diagram describes the main classes and their relationships in MATCS. The central
+process is represented by the CentralProcess class, which coordinates the main simulation
+cycle. The SimulatorAdapter is responsible for communicating with the traffic simulator and
+obtaining traffic observations, while the StateBuilder converts the observations into an
+intersection state. The SignalController represents the controller interface, with
+FixedTimeController as the initial deterministic controller and QueueAwareController as a
+future work option. The proposed signal action is checked by the SafetyValidator before it
+can be applied. The system also uses MetricsCollector to calculate traffic performance
+metrics and RunRepository to store and load simulation results. Other classes, such as
+Observation, IntersectionState, SignalProposal, ValidationResult, RunMetrics, Intersection,
+Approach, and TrafficLightPhase, represent the data used throughout the simulation process.
+
+--- PAGE Team Report (current_ Chapter 3 (Project Design))_page-0018.jpg ---
+
+3.1.3 Activity Diagram
+
+Proposal passes
+safety rules?
+
+No}
+
+ΓÇÿAdvance simulation step
+
+Zan
+
+( tocora state and metrics ) ( Update dashboard )
+
+ΓÇÿSummarize run metrics
+Store run results
+
+Figure 3.3. Activity Diagram of MATCS
+
+The Activity Diagram illustrates the workflow of MATCS during a traffic simulation. The
+
+process starts by loading the simulation scenario and random seed, followed by initializing
+
+--- PAGE Team Report (current_ Chapter 3 (Project Design))_page-0019.jpg ---
+
+the simulator and controller. The system then reads the traffic observation and builds the
+current intersection state. Based on this state, the controller proposes a traffic signal action.
+The proposed action is then checked against the defined safety rules. If the proposal passes
+the validation, the action is applied; otherwise, the system keeps the current phase or applies
+a safe fallback. The simulation then advances to the next step, while the system records the
+state and traffic metrics and updates the dashboard. The process is repeated until the
+simulation ends. Finally, the system summarizes the run metrics and stores the simulation
+
+results.
+
+3.1.4 Sequence Diagram
+
+CentralProcess | Simutatoradapter StateBuilder | SignalController | | SafetyValidator | | DashboardPublisher
+
+| 1 getObservation()
+
+2 Observation
+
+| 3 build(Observation)
+
+|g 4 IntersectionState \
+
+5 propose(IntersectionState) _| '
+
+6 SignalP 7 i
+\ & SignalProposa i :
+
+|_7 validate(SignalProposal, IntersectionState)
+
+\_8 ValidationResult
+
+ΓÇÿalt__77 [alidationResult is approved)
+|.9 applyAction(SignalProposal) | | '
+ΓÇöΓÇöΓÇöΓÇöEereeee
+
+[WalidationResuit is rejected] i H
+| 10 apply safe fallback
+
+{11 publish(intersectionState, RunMetrics)
+
+CentralProcess { SimulatorAdapter | StateBuilder | | SignalController | | SafetyValidator | | DashboardPublisher
+
+Figure 3.4. Sequence Diagram of MATCS
+
+The Sequence Diagram illustrates the chronological flow of messages between the main
+components of MATCS during a single simulation control cycle. The process begins when
+the CentralProcess requests traffic data by calling the SimulatorAdapter. The retrieved data is
+then passed to the StateBuilder to construct the current IntersectionState. Next, the
+CentralProcess requests a SignalProposal from the SignalController. Before applying this
+proposed action to the simulator, it must be sent to the SafetyValidator to ensure that it passes
+
+all safety rules. If the proposal is approved, the action is executed via the SimulatorAdapter;
+
+--- PAGE Team Report (current_ Chapter 3 (Project Design))_page-0020.jpg ---
+
+otherwise, a safe fallback is applied. Finally, the updated state and metrics are sent to the
+DashboardPublisher to update the user interface.
+
+3.1.5 State Diagram
+
+( RedPhase
+
+Controller proposes Green
+& SafetyValidator approves
+
+GreenPhase
+
+yellowTime duration elapsed
+
+maxGreen duration expires OR
+Controller proposes phase switch
+
+Safety validation fails \system recovered
+
+YellowPhase
+
+Safety validation fails
+
+Safety validation fails
+
+SafeFallback |
+
+Figure 3.5. State Diagram of MATCS
+
+The State Diagram depicts the possible states of a traffic light approach within the MATCS
+environment and the conditions that trigger transitions between these states. A traffic light
+typically cycles through the Red, Green, and Yellow phases. A transition from the Red phase
+to the Green phase occurs when the controller allocates the right of way to a specific
+approach and the proposal successfully passes the SafetyValidator. The Green state transitions
+to the Yellow state either when its maximum allocated duration expires or when the controller
+decides to switch phases due to changing traffic conditions. The Yellow state is a transient
+state that automatically transitions back to Red after a fixed yellow time duration.
+Additionally, if any proposed action fails the safety validation at any point, the system
+
+transitions to a Safe Fallback state to prevent conflicting movements.
+
+--- PAGE Team Report (current_ Chapter 3 (Project Design))_page-0021.jpg ---
+
+3.2 Helicopter View of the Design
+
+MATCS ΓÇö HELICOPTER VIEW OF THE DESIGN
+
+(Simulation-only, One Intersection)
+
+USERS
+ΓÇÿTraffic Officer ) {Researcher / Operator
+(Dishub / Police) (team member)
+
+┬⌐ View live intersection state ΓÇÿ+ Configure scenario
+
+┬⌐ View traffic metrics ┬½ Select controller
+
++ Run simulation
+ΓÇÿ┬⌐ Compare results
++ Replay recorded run
+
+# View controller decision log
+
+visualization
+user input (ests, metres, logs,
+live state)
+
+Web Dashboard (User Interface)
+
+┬½Start / stop simulation
++ Visualize intersection stat (live)
++ Compare controllers and replay runs
+a request (simulation parameters)
+a eae apg Aca, APN MIB ae Fy,
+| MATCS Core (Backend) |
+| |
+ΓÇÿSimulator State Signal Safety Action |
+ΓÇÿAdapter Builder Controller Validator Applier |
+ΓÇÿ+ Communicate ΓÇÿ┬⌐ Build intersection || ┬⌐ Generate signal ΓÇÿ+ Validate proposal Ly] * Apply signal |
+swith simulator guadin proposal with safety roles action to simulator |
+|| + Got traffic observations (eg., rule-based / (or safe fallback) |
+1 observations RL-based) i
+\ }
+intersection state) (applied / fallback) run data et oe
+Traffic Simulator Metrics Collector & Logger
+(e.g., SUMO) ΓÇÿ┬⌐ Calculate performance metrics
+┬⌐ Simulate traffic flow (e.g., avg delay, queue length, throughput)
++ Provide traffic observations + ΓÇÿStore simulation state, actions, and logs
+(vehicle counts, queue lengths, etc.) * Publish data to dashboard
++ Receive and apply signal actions
+store data processed data
+Database / Run Repository Metrics & Visualization Module
+(eg, PostgreSQL) * Process metrics data
+
+┬⌐ Store simulation runs Provide data for dashboard charts
+┬⌐ Store state, actions, and logs ΓÇÿSupport comparison between
+# Store performance metrics controllers
+
+Figure 3.6. Helicopter View of the Design - MATCS
+
+The Helicopter View of MATCS provides a high-level overview of how the main components
+of the system are connected during the traffic simulation process. The system involves two
+types of users: Traffic Officers, who can view the intersection state, traffic metrics, and
+controller decision logs, and Researchers/Operators, who can configure scenarios, select
+
+controllers, run simulations, compare results, and replay recorded runs.
+
+User inputs are provided through the Web Dashboard (User Interface), which is used to
+
+configure simulation parameters such as the scenario, controller, duration, and random seed.
+
+--- PAGE Team Report (current_ Chapter 3 (Project Design))_page-0022.jpg ---
+
+The dashboard also allows users to start or stop the simulation, view the current intersection
+
+state, and display traffic metrics and logs.
+
+The main processing is handled by the MATCS Core (Backend), which consists of the
+Simulator Adapter, State Builder, Signal Controller, Safety Validator, and Action Applier.
+The Simulator Adapter receives traffic observations from the simulator, while the State
+Builder uses these observations to build the intersection state. The Signal Controller then
+generates a signal proposal, which is checked by the Safety Validator before being applied to
+the simulator. If the proposed action does not satisfy the safety rules, a safe fallback can be
+
+applied instead.
+
+The Traffic Simulator, such as SUMO, is responsible for simulating traffic flow, providing
+traffic observations such as vehicle counts and queue lengths, and receiving signal actions
+from MATCS. During the simulation, the Metrics Collector & Logger calculates performance
+metrics, stores simulation states, actions, and logs, and provides the processed data for
+visualization. The simulation results are stored in the Database/Run Repository, while the
+Metrics & Visualization Module processes the metrics and provides data for dashboard
+
+visualization and controller comparison.
+
+Overall, the Helicopter View illustrates the main system flow of MATCS, starting from user
+input and dashboard configuration, continuing through traffic observation, state building,
+signal proposal, safety validation, and action application, and ending with data collection,
+
+storage, and visualization.
+
+--- PAGE Team Report (current_ Chapter 3 (Project Design))_page-0023.jpg ---
+
+3.3 Website Design
+
+ERREEEE Dashboard
+
+Ou
+
+8 oe
+
+┬º MatTcs
+
+Figure 3.7. Login Page Figure 3.8. Main Dashboard (Live View)
+
+Simulation Running ED aw Simulation Resuts
+oo ΓÇöΓÇö =
+Uo Maries Ip dee shes ta
+
+Figure 3.11. Simulation Results Page
+
+Figure 3.10, Simulation Running Page
+
+Figure 3.9. Simulation Set
+
+Controier Comparison
+
+Figure 3.12. Controller Comparison Page
+
+--- PAGE Team Report (current_ Chapter 3 (Project Design))_page-0024.jpg ---
+
+CHAPTER 4
+
+--- PAGE Team Report (current_ Chapter 3 (Project Design))_page-0025.jpg ---
+

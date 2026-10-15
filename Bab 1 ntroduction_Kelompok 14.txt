@@ -1,0 +1,163 @@
+﻿MULTI-AGENT TRAFFIC CONTROL SYSTEM
+
+
+  
+
+
+
+
+
+Group 14
+1. Samuel Tanaka S                 2206059710 
+2. Alfonsus Tanara G                2306267126 
+3. Ade Zaskia Azzahra                2406344353
+
+
+
+
+
+
+COMPUTER ENGINEERING STUDY PROGRAM
+FACULTY OF ENGINEERING
+UNIVERSITAS  INDONESIA
+2026
+
+
+
+
+
+
+PREFACE
+First of all, we would like to express our gratitude to God Almighty for His blessings and guidance, which have allowed us to complete this project report entitled “Multi-Agent Traffic Control System (MATCS)”. This report was prepared as part of the Software Engineering course and as a form of documentation for the project developed by Group 14. 
+This project was developed based on the problem of traffic congestion in urban areas, particularly at road intersections. Through this project, we explore the use of Agentic Artificial Intelligence (AI) to create a traffic light control system that can adapt to changing traffic conditions. MATCS is designed to allow agents at different intersections to monitor traffic conditions, make decisions regarding traffic light duration, and coordinate with other agents to help reduce vehicle buildup and waiting time. 
+Throughout the development of this project, we gained a better understanding of how software engineering concepts can be applied to real-world problems. We also learned that developing an AI-based system is not only about creating the technology itself, but also about understanding the problem, identifying user needs, planning the system, considering possible risks, and working together as a team. 
+We would like to express our sincere gratitude to Prof. Riri as the lecturer of the Software Engineering course for the guidance, feedback, and knowledge provided throughout the project. We would also like to thank everyone who has supported us, directly or indirectly, during the preparation of this project and report. 
+We realize that this report is still far from perfect. Therefore, constructive suggestions and feedback are highly appreciated for further improvement. We hope that this report can provide a clear overview of the MATCS project and the process behind its development. 
+
+
+
+
+
+
+
+
+TABLE OF CONTENTS
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+CHAPTER 1
+INTRODUCTION
+1.1 Introduction
+Artificial Intelligence (AI) has become one of the technologies that can be used to help solve various problems in everyday life. Its development has opened opportunities to create systems that are able to respond to changing situations and support decision-making. One of the areas where this technology can be applied is transportation, especially traffic management in urban areas. Traffic conditions in a city can change quickly depending on the number of vehicles, time of day, and daily activities. Because of these changes, traffic management requires a system that can adapt to the conditions on the road rather than relying entirely on the same pattern at all times. 
+One of the important parts of traffic management is the use of traffic lights at road intersections. Traffic lights help organize vehicles coming from different directions so that they can move through an intersection in an orderly manner. However, the number of vehicles on each road is not always the same. There are times when one direction is much more crowded than another, such as during the morning or afternoon when many people are traveling at the same time. If the traffic light duration does not adjust to these conditions, vehicles may have to wait longer and the queue can become increasingly crowded. 
+For example, when one road has a large number of vehicles but receives only a short green-light duration, some vehicles may not have enough time to pass through the intersection. As a result, the remaining vehicles continue to form a queue. Meanwhile, another road with fewer vehicles may receive the same amount of green-light time. This condition can make the traffic light less effective because the allocation of time does not fully reflect the actual traffic situation. Therefore, a more adaptive approach is needed so that traffic light settings can respond to the different conditions of each road. 
+The situation becomes even more challenging when there are several intersections located along the same route. A traffic condition at one intersection can affect another intersection because vehicles that pass through one intersection may continue toward the next one. If each traffic light operates independently, a decision that helps reduce congestion at one intersection may potentially create a new queue at another intersection. For this reason, traffic management should not only consider what is happening at a single intersection, but also consider the conditions of other intersections that are connected to it. 
+Based on this problem, our group developed the Multi-Agent Traffic Control System (MATCS) as a concept for an Agentic AI-based traffic light control system. The main idea of MATCS is to place an agent at each intersection so that the traffic conditions at different intersections can be considered individually while still being connected as part of a larger system. Each agent is expected to observe the traffic situation at its intersection and make decisions regarding the traffic light duration based on the current vehicle conditions. 
+What makes MATCS different from a system that only changes the duration of one traffic light is its focus on coordination between multiple intersections. The agents are designed to communicate with other agents at connected intersections. This means that a decision made at one intersection can also take into account the situation at another intersection. For example, if one intersection is experiencing heavy traffic and many vehicles are moving toward the next intersection, the system can consider the condition of the next intersection before making adjustments. In this way, the system does not only ask, “Which road is crowded right now?” but also considers, “What could happen to the next intersection if this traffic is allowed to move?” 
+The use of multiple agents is expected to make the traffic light control process more flexible. Instead of treating every intersection as a completely separate system, MATCS views several intersections as connected parts of the same traffic environment. Each agent can focus on its own intersection while still exchanging information and coordinating decisions with other agents. Through this approach, the system is expected to respond better to changes in traffic conditions and reduce the possibility of vehicle buildup moving from one intersection to another. 
+The Agentic AI concept is also an important part of MATCS. The system is not intended to simply collect traffic information or display the current number of vehicles. Instead, the agents are expected to use the information they receive to understand the current situation, make decisions, take appropriate actions, and adjust those decisions when the traffic conditions change. This approach allows the system to have a continuous decision-making process rather than depending on one fixed setting. 
+Through MATCS, our group aims to develop a concept that can help make traffic light management more adaptive and coordinated. The project focuses on several main objectives, including adjusting traffic light duration according to vehicle conditions, reducing vehicle buildup at intersections, reducing waiting time, and coordinating traffic light settings across multiple intersections. These objectives are expected to support smoother traffic flow and provide a better way of responding to changing traffic situations. 
+MATCS is also intended to demonstrate how Agentic AI can be applied to a real-world problem. Traffic management is a suitable example because the conditions are constantly changing and decisions at one location can affect other locations. By combining the concept of multiple agents with adaptive traffic light control, this project explores how AI can be used not only to process information, but also to support decision-making and coordinate actions within a connected system. 
+Although MATCS is still being developed as a project prototype, the concept is expected to provide an overview of how traffic management can become more responsive to real-time conditions. Instead of having traffic lights operate based on fixed settings, the system can adapt its decisions according to the situation at each intersection while considering the conditions of surrounding intersections. Through this project, our group hopes to show that the use of Agentic AI can provide a potential approach for improving traffic management in urban areas, particularly in situations where multiple intersections need to work together. 
+
+
+1.2 Background / Environmental Setting
+Traffic congestion is one of the common problems found in urban areas, especially in locations with a high number of vehicles and busy daily activities. As more people use private vehicles and other forms of transportation, the number of vehicles passing through roads and intersections can increase significantly at certain times. This situation can become more noticeable during peak hours, when many people travel to schools, universities, offices, and other destinations at nearly the same time. As a result, some roads and intersections may experience much higher traffic density than usual. 
+One of the locations where congestion can become a major problem is a road intersection. An intersection has to handle vehicles coming from different directions, so the movement of vehicles needs to be properly managed. Traffic lights are commonly used to control this movement by giving each direction a specific period to move. However, the traffic condition at an intersection is not always predictable. The number of vehicles can increase or decrease depending on the time and situation on the road. Because of this, a fixed traffic light setting may not always be suitable for the actual condition. 
+For example, during a certain period, one direction may have a long queue while another direction has only a few vehicles. If both directions continue to receive the same traffic light setting, the crowded direction may require more time to clear its queue. Meanwhile, the less crowded direction may receive more green-light time than it actually needs. This can lead to inefficient use of the available time at the intersection. When this situation happens repeatedly, it can contribute to longer waiting times and increasing vehicle queues. 
+The traffic situation can also become more complicated when several intersections are located close to each other or are connected by the same road network. Vehicles that pass through one intersection will usually continue to another part of the road, which means that the traffic condition at one location can influence the condition at another location. A change in the traffic light at one intersection may therefore affect the number of vehicles arriving at the next intersection. If these intersections are managed independently, there is a possibility that a solution for one intersection may create another problem at a nearby intersection. 
+This condition can be illustrated through a simple example involving three connected intersections: Intersection A, Intersection B, and Intersection C. If Intersection A is experiencing heavy traffic, increasing the green-light duration may help reduce the queue at A. However, if a large number of vehicles are then released from A toward Intersection B, the traffic at B may become heavier. If the traffic light at B is not adjusted according to the incoming traffic, the queue may simply move from A to B. In this situation, reducing congestion at one intersection does not necessarily mean that the overall traffic condition has improved. 
+This is where coordination between intersections becomes important. Instead of treating each intersection as an independent point, the traffic system can consider the intersections as connected parts of the same environment. Information about traffic density at one intersection can be useful for understanding what may happen at another intersection. By considering these connections, traffic management can potentially avoid making decisions that solve congestion at one location while causing excessive congestion at another. 
+The environmental setting of the MATCS project is therefore based on a traffic environment consisting of multiple connected road intersections with changing vehicle conditions. Each intersection can have different traffic characteristics depending on the time, direction of movement, and number of vehicles present. Because the conditions are dynamic, the system needs to be able to respond to changes rather than depending entirely on a single fixed traffic pattern. 
+In this environment, the use of Agentic AI provides an opportunity to approach the problem from a different perspective. Instead of having one centralized decision that controls every intersection in exactly the same way, MATCS uses the concept of multiple agents. Each agent can focus on observing the condition of its own intersection while communicating with other agents that are connected to it. This allows the system to consider both local conditions and the wider situation across multiple intersections. 
+The agents in MATCS are expected to work together when responding to traffic changes. When one intersection becomes more crowded, its agent can identify the condition and make an appropriate decision regarding the traffic light. At the same time, the agent can consider information from nearby intersections so that the decision does not create an unnecessary buildup in another location. As traffic conditions change, the agents can continue to reassess the situation and adjust their decisions accordingly. 
+The project also considers traffic data as an important part of this environment. The planned data includes road maps, CCTV traffic monitoring at each intersection, and data that can be used to determine the congestion index at different points. These data can help describe the condition of the road network and the level of traffic density at each location. The information can then be used by the system as a basis for understanding the current situation before making decisions. 
+Overall, the environmental setting of MATCS is closely related to the characteristics of urban traffic: changing vehicle density, different conditions at each intersection, and the connection between one intersection and another. These characteristics create a situation where traffic management cannot always rely on the same settings. A more adaptive and coordinated approach is needed to respond to changes in the traffic environment. 
+Based on this background, MATCS is proposed as a system concept that applies Agentic AI to coordinate traffic light control across multiple intersections. The project focuses on how agents can observe traffic conditions, make decisions based on those conditions, and coordinate with other agents. Through this approach, MATCS is expected to help reduce vehicle buildup and waiting time while making traffic light management more responsive to the actual conditions of the surrounding traffic environment. 
+
+
+1.3 Project Definition
+The Multi-Agent Traffic Control System (MATCS) is a project concept that aims to improve traffic light management at multiple connected road intersections by using Agentic Artificial Intelligence (AI). The project is developed based on the idea that traffic conditions are constantly changing and that each intersection may experience different levels of vehicle density at different times. Therefore, traffic light settings should be able to respond to the current situation rather than relying entirely on fixed timing. 
+The main concept of MATCS is to assign an AI agent to each traffic intersection. Each agent is responsible for observing and understanding the traffic condition around its own intersection. Based on the available traffic information, the agent can determine whether the traffic light duration needs to be adjusted. For example, when a particular road has a higher number of vehicles than other directions, the agent can consider giving that direction a more appropriate green-light duration to help reduce the queue. 
+However, MATCS does not focus only on adjusting the traffic light at one intersection. The main characteristic of this project is the coordination between multiple agents at different intersections. Each agent can communicate with other agents that are connected within the same road network. This allows the system to consider the conditions of other intersections before making a decision. As a result, the system is expected to avoid making decisions that may solve congestion at one intersection while creating a new buildup at another intersection. 
+For example, consider three connected intersections: Intersection A, Intersection B, and Intersection C. If Intersection A is experiencing heavy traffic, its agent may determine that the traffic light needs to be adjusted to allow more vehicles to pass. However, before or while making this adjustment, the condition of Intersection B should also be considered because the vehicles released from A may move toward B. If B is already crowded, simply allowing more vehicles to leave A may make the situation worse. Through communication between agents, MATCS aims to make decisions that consider the traffic flow across multiple intersections instead of focusing on only one location. 
+The decision-making process in MATCS can generally be described through several stages. First, the system observes the current traffic conditions. The agents then analyze the information they receive to identify the level of traffic density and the condition of their respective intersections. After that, the agents make decisions regarding the traffic light settings. These decisions can also take into account information received from other connected agents. Once the decision is applied, the traffic condition can be observed again to determine whether the situation has improved or whether another adjustment is needed. 
+This process represents the Agentic AI approach used in MATCS. The agents are not intended to only receive information and provide a static result. Instead, they are expected to observe, analyze, decide, act, and evaluate based on the changing traffic situation. This allows the system to continuously respond to changes in the environment. If the traffic condition changes after a decision is made, the agent can reassess the situation and determine whether its previous decision is still appropriate. 
+Another important part of the project is the relationship between individual agents and the overall traffic system. Each agent has its own responsibility at a specific intersection, but the agents are still part of one connected system. This creates a balance between local decision-making and coordination across intersections. An agent can focus on solving the condition at its own intersection while also considering how its decision may affect nearby intersections. 
+The main objectives of MATCS are to make traffic light duration more responsive to vehicle conditions, reduce vehicle buildup at intersections, reduce vehicle waiting time, and improve coordination between multiple intersections. Through these objectives, the project aims to create a traffic management concept that can respond more effectively to different traffic conditions. 
+MATCS is also intended to demonstrate the application of Agentic AI in a real-world transportation problem. Traffic management is a suitable problem for this approach because it involves many changing factors and decisions that can affect each other. A decision at one intersection can influence the traffic flow at another intersection, making coordination an important part of the system. 
+At this stage, MATCS is defined as a prototype project rather than a system that directly controls real traffic lights in Jakarta. The project focuses on demonstrating the concept of adaptive and coordinated traffic light control using multiple agents. The prototype is expected to show how agents can work together to observe traffic conditions, make decisions, and respond to changes in the traffic environment. 
+In summary, MATCS can be defined as an Agentic AI-based traffic control system in which multiple agents manage and coordinate traffic light decisions across connected intersections. Instead of treating each intersection as an independent system, MATCS views the intersections as parts of one connected traffic environment. Through adaptive decision-making and communication between agents, the project aims to provide a more coordinated approach to traffic light management and help reduce congestion and waiting time.
+
+
+1.4 User Story
+To ensure the Multi-Agent Traffic Control System (MATCS) meets the needs of its stakeholders, the following user stories have been defined for the prototype development:
+* As a traffic control operator, I want to monitor the current traffic conditions and agent decisions across all connected intersections through a centralized dashboard so that I can ensure the system is operating efficiently.
+* As a traffic control operator, I want to have a manual override feature so that I can immediately take control of the traffic lights during emergency situations or unexpected anomalies.
+* As a daily commuter, I want the traffic lights to adapt to the volume of vehicles in real-time so that my waiting time is reduced.
+* As a daily commuter, I want to experience smoother traffic flow across multiple intersections without sudden buildups so that my travel time becomes more predictable.
+
+
+1.5 Software and Hardware Requiretments
+The development and simulation of the MATCS prototype require specific technical environments to accurately test the Agentic AI capabilities.
+Software Requirements:
+* Traffic Simulation Software: An open-source simulator (such as SUMO) to generate synthetic, real-time traffic environments, replacing the need for physical deployment during the prototype phase.
+* Agentic Framework & Programming Language: Python, paired with an AI framework (such as CrewAI or LangGraph), to program the reasoning, decision-making, and communication protocols of the decentralized agents.
+* Data Integration Tools: APIs to process simulated road maps, CCTV traffic monitoring data, and congestion index data.
+Hardware Requirements:
+* Development Workstation: A multi-core processor computer with sufficient RAM (minimum 16GB) capable of running the traffic simulator and multiple AI agents simultaneously without severe latency.
+
+
+1.6 Competitor Product
+A notable existing implementation of AI in traffic management is the Intelligent Traffic Control System (ITCS), such as Google’s Project Green Light, which is currently being tested in various urban areas. This competitor product utilizes centralized AI in the cloud to analyze massive amounts of user navigation data and provides recommendations for traffic light adjustments.
+While ITCS relies on a centralized system to give recommendations to human operators, MATCS differentiates itself by deploying an autonomous, decentralized multi-agent architecture. In MATCS, an individual agent is placed at each intersection. These agents actively communicate with other agents at connected intersections to automatically execute traffic light changes in real-time. This coordination across intersections aims to proactively prevent vehicle buildup moving from one intersection to another, rather than merely reacting to existing congestion.
+
+
+1.7 Risk Analysis
+Developing an autonomous, multi-agent system introduces several risks that must be mitigated during the prototyping phase:
+* Data Inaccuracy Risk: The system's reasoning depends heavily on accurate inputs from road maps, CCTV traffic monitoring, and congestion indices. If the data feed is delayed or corrupted, agents may make suboptimal decisions, worsening the traffic conditions.
+* Agent Coordination Failure: Since the main characteristic of MATCS is the coordination between multiple agents, a failure in communication could cause agents to act independently. This could lead to a scenario where relieving congestion at one intersection inadvertently creates a severe buildup at the next.
+* Threshold and Edge Cases: Real-world traffic involves unpredictable elements such as accidents, pedestrian interference, and emergency vehicles. The AI agents might struggle to process these anomalies without strict guardrails and the availability of a manual override system for human operators.

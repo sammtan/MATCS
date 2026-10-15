@@ -1,0 +1,198 @@
+:root {
+  color-scheme: light;
+  --navy: #142b49;
+  --blue: #28527a;
+  --gold: #c59b4b;
+  --ink: #253246;
+  --muted: #697789;
+  --paper: #fffefa;
+  --line: #d9e0e8;
+  --wash: #f1f5f8;
+}
+
+* { box-sizing: border-box; }
+
+html { background: #e8edf2; }
+
+body {
+  max-width: 920px;
+  margin: 42px auto;
+  padding: 72px 82px 78px;
+  color: var(--ink);
+  background: var(--paper);
+  box-shadow: 0 16px 50px rgb(20 43 73 / 13%);
+  font-family: "Source Serif 4", Georgia, serif;
+  font-size: 11.5pt;
+  line-height: 1.72;
+  counter-reset: article;
+}
+
+#header {
+  margin: -72px -82px 52px;
+  padding: 58px 82px 46px;
+  color: white;
+  background: var(--navy);
+  border-bottom: 5px solid var(--gold);
+  text-align: center;
+}
+
+#header h1 {
+  max-width: 720px;
+  margin: 0 auto 14px;
+  font-family: "DM Sans", Arial, sans-serif;
+  font-size: 29pt;
+  font-weight: 700;
+  letter-spacing: .035em;
+  line-height: 1.2;
+  text-transform: uppercase;
+}
+
+#header h2 {
+  margin: 0;
+  color: #e8d5ad;
+  font-family: "DM Sans", Arial, sans-serif;
+  font-size: 13pt;
+  font-weight: 500;
+  letter-spacing: .15em;
+}
+
+#header h3 {
+  margin: 18px 0 0;
+  color: #d7e2ee;
+  font-family: "DM Sans", Arial, sans-serif;
+  font-size: 10pt;
+  font-weight: 500;
+}
+
+h1, h2, h3, h4 {
+  color: var(--navy);
+  font-family: "DM Sans", Arial, sans-serif;
+  line-height: 1.35;
+}
+
+body > h3 {
+  margin: 29px 0 8px;
+  color: var(--gold);
+  font-size: 9pt;
+  font-weight: 700;
+  letter-spacing: .18em;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+body > h3 + p {
+  margin-top: 0;
+  color: var(--navy);
+  font-family: "DM Sans", Arial, sans-serif;
+  font-size: 15pt;
+  font-weight: 700;
+  line-height: 1.45;
+  text-align: center;
+}
+
+body > p:first-of-type {
+  margin: 35px 0 26px;
+  padding: 18px 22px;
+  background: var(--wash);
+  border-left: 3px solid var(--gold);
+}
+
+h2 {
+  margin: 38px 0 15px;
+  padding-bottom: 9px;
+  border-bottom: 1px solid var(--line);
+  font-size: 16pt;
+  break-after: avoid-page;
+}
+
+h3 {
+  margin: 26px 0 10px;
+  font-size: 12pt;
+  break-after: avoid-page;
+}
+
+p { margin: 0 0 13px; }
+
+ol, ul { padding-left: 1.6em; }
+li { padding-left: .25em; margin: 0 0 6px; }
+
+strong { color: var(--navy); font-weight: 700; }
+em { color: var(--blue); }
+
+a { color: var(--blue); text-decoration-color: var(--gold); text-underline-offset: 3px; }
+
+hr { margin: 34px 0 20px; border: 0; border-top: 1px solid var(--line); }
+
+table {
+  width: 100%;
+  margin: 24px 0;
+  border-collapse: collapse;
+  table-layout: fixed;
+  font-family: "DM Sans", Arial, sans-serif;
+  font-size: 9.5pt;
+  line-height: 1.55;
+  break-inside: avoid;
+}
+
+th {
+  padding: 12px 14px;
+  color: white;
+  background: var(--navy);
+  text-align: left;
+  vertical-align: top;
+}
+
+td {
+  height: 50px;
+  padding: 12px 14px;
+  border: 1px solid var(--line);
+  vertical-align: top;
+}
+
+tr:nth-child(even) td { background: #f6f8fa; }
+
+/* Signature blocks: generous whitespace for handwritten signatures. */
+table:has(th:first-child) th { width: 50%; }
+table:has(th:first-child) td { height: 74px; }
+
+body > p:last-of-type {
+  margin-top: 28px;
+  padding: 18px 21px;
+  background: #f5f1e8;
+  border: 1px solid #e3d7bd;
+  border-radius: 3px;
+  font-size: 10pt;
+}
+
+@page {
+  size: A4;
+  margin: 19mm 21mm 20mm;
+}
+
+@media print {
+  html, body { background: white; }
+  body {
+    max-width: none;
+    margin: 0;
+    padding: 0;
+    box-shadow: none;
+    color: #111827;
+    font-size: 10.5pt;
+    line-height: 1.6;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+  #header {
+    margin: -19mm -21mm 14mm;
+    padding: 18mm 21mm 13mm;
+    print-color-adjust: exact;
+  }
+  #header h1 { font-size: 24pt; }
+  h2 { margin-top: 26px; font-size: 14pt; }
+  h3 { font-size: 11pt; }
+  p, li { orphans: 3; widows: 3; }
+  table { font-size: 8.5pt; }
+  a { color: inherit; text-decoration: none; }
+  a[href^="http"]::after { content: " (" attr(href) ")"; font-size: 8pt; }
+  tr, th, td { break-inside: avoid; }
+}
